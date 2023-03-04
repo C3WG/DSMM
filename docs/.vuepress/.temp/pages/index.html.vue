@@ -1,0 +1,636 @@
+<template><div><h1 id="data-security-maturity-model" tabindex="-1"><a class="header-anchor" href="#data-security-maturity-model" aria-hidden="true">#</a> Data Security Maturity Model</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#scope-and-purpose">Scope and Purpose</router-link></li><li><router-link to="#why-use-dsmm">Why use DSMM</router-link></li><li><router-link to="#how-to-navigate-the-model">How to Navigate the Model</router-link></li><li><router-link to="#key-terms">Key Terms</router-link><ul><li><router-link to="#functions">Functions</router-link></li><li><router-link to="#objectives">Objectives</router-link></li><li><router-link to="#practices">Practices</router-link></li></ul></li><li><router-link to="#defining-data-security-program-goals">Defining Data Security Program Goals</router-link></li><li><router-link to="#identify-and-classify">Identify and Classify</router-link><ul><li><router-link to="#data-discovery">Data Discovery</router-link></li><li><router-link to="#data-location-discovery-and-context">Data Location Discovery and Context</router-link></li><li><router-link to="#data-classification">Data Classification</router-link></li><li><router-link to="#data-risk-assessment">Data Risk Assessment</router-link></li></ul></li><li><router-link to="#protect">Protect</router-link><ul><li><router-link to="#controlling-access">Controlling Access</router-link></li><li><router-link to="#identifying-and-preventing-misuse">Identifying and Preventing Misuse</router-link></li><li><router-link to="#user-education-and-feedback">User Education and Feedback</router-link></li><li><router-link to="#data-retention">Data Retention</router-link></li></ul></li><li><router-link to="#detect">Detect</router-link><ul><li><router-link to="#signal-collection">Signal Collection</router-link></li><li><router-link to="#analysis-methods">Analysis Methods</router-link></li></ul></li><li><router-link to="#respond">Respond</router-link><ul><li><router-link to="#triage-and-mitigation">Triage and Mitigation</router-link></li><li><router-link to="#communications">Communications</router-link></li></ul></li><li><router-link to="#recover-and-improve">Recover and Improve</router-link><ul><li><router-link to="#data-backup-and-recovery">Data Backup and Recovery</router-link></li><li><router-link to="#incident-review-lessons-learned">Incident Review / Lessons Learned</router-link></li><li><router-link to="#collaboration-and-research">Collaboration and Research</router-link></li></ul></li><li><router-link to="#appendix">Appendix</router-link><ul><li><router-link to="#getting-started-with-dsmm">Getting Started with DSMM</router-link></li><li><router-link to="#assess-organizational-data-needs">Assess Organizational Data Needs</router-link></li><li><router-link to="#identify-target-data-security-levels-and-identify-gaps">Identify Target Data Security Levels and Identify Gaps</router-link></li><li><router-link to="#develop-and-implement-the-data-security-plan">Develop and Implement the Data Security Plan</router-link></li></ul></li><li><router-link to="#example-scenarios">Example Scenarios</router-link><ul><li><router-link to="#scenario-1">Scenario 1</router-link></li><li><router-link to="#scenario-2">Scenario 2</router-link></li></ul></li></ul></nav>
+<h2 id="scope-and-purpose" tabindex="-1"><a class="header-anchor" href="#scope-and-purpose" aria-hidden="true">#</a> Scope and Purpose</h2>
+<p>The Data Security Maturity Model (DSMM) helps organizations protect their data and critical assets by developing a data-centric approach to security. Overall, the DSMM shares a similar structure with some of the most well-known security frameworks in the industry, most notably the NIST Cybersecurity Framework. This will hopefully allow organizations to integrate it more easily into their existing security and privacy efforts and augment their investment in other frameworks.</p>
+<h2 id="why-use-dsmm" tabindex="-1"><a class="header-anchor" href="#why-use-dsmm" aria-hidden="true">#</a> Why use DSMM</h2>
+<p>Many security models cover key aspects of data security and privacy, but the DSMM brings a uniquely &quot;data-centric&quot; approach not found in other models. While traditional data protection strategies have typically focused on narrowly defined use cases or specific threats, the DSMM aims to help organizations take a broad, more consistent approach to protect any or all of their data. Such an approach is a growing priority for security leaders as enterprise data has become incredibly dynamic both in terms of how it is used and where it resides. No longer sequestered in databases, today's data is constantly being used, modified, and shared by users over dozens of applications. Data likewise can exist virtually anywhere, including in end-user devices, traditional and SaaS applications, and a variety of other cloud services.</p>
+<p>A data-centric approach to security ensures that risk context and policy enforcement can be applied to any data and can follow the data itself wherever it moves or however it is modified. Instead of relying on network-based boundaries, a data-centric approach is able to &quot;follow the bouncing ball&quot; of data, so to speak, without losing visibility and control. This type of approach is essential for organizations to fully leverage the power of their data while also keeping it safe from external threats, insider threats, or simple mistakes that can put the availability, confidentiality, or integrity of data at risk.</p>
+<p>Organizations also have access to new types of data security and privacy tools that can make such a data-centric approach far more practical and reliable than ever before. In the past, the limitations of traditional tools often made data security efforts highly laborious and limited to very narrow use cases. A recent wave of innovation is now enabling organizations to extend data security principles to virtually any type of data, anywhere in the enterprise. The DSMM is designed to provide a blueprint to help organizations align available tools and practices to the unique needs and risks of their environment.</p>
+<h2 id="how-to-navigate-the-model" tabindex="-1"><a class="header-anchor" href="#how-to-navigate-the-model" aria-hidden="true">#</a> How to Navigate the Model</h2>
+<p>The DSMM is organized into five key Functions of a data security program. These Functions are:</p>
+<ul>
+<li><strong>Identify and Classify</strong></li>
+<li><strong>Protect</strong></li>
+<li><strong>Detect</strong></li>
+<li><strong>Respond</strong></li>
+<li><strong>Recover and Improve</strong></li>
+</ul>
+<p><img src="/images/dsmm-legend.svg" alt="DSMM Legend"></p>
+<p>Each <strong>Function</strong> covers multiple underlying <strong>Objectives</strong>. Objectives focus on a particular aspect of security that supports the higher level Function. For example, &quot;Data Discovery&quot; is an Objective within the Identify and Classify Function. Each Objective is addressed at up to three <strong>Levels</strong> of maturity. Each Level includes Practices/Activities that are needed in order to meet the given Level of maturity and include example methods and tools that can be used to implement and fulfill those Practices. These example methods and tools are not intended to be exhaustive, but rather to provide some basic references and guidance for users of the model. Organizations are encouraged to investigate and identify the methods, tools, and processes that make the most sense for their unique needs.</p>
+<p>Most Objectives contain three Levels of maturity. Each ascending Level introduces an improvement in the degree to which the Objective is met and/or an increase in the scope of the Objective. For example, Level 1 Discovery may cover manual identification and tagging of data in select locations or databases, while Level 3 would cover the automated discovery of all sensitive information in all locations. Level 3 Objectives have the broadest scope and level of completeness/sophistication. The use of the word &quot;all&quot; in these levels should not imply that an organization has to be perfect in order to achieve the Level of maturity. Naturally, perfection is rarely possible in real-world security practice. Instead, we use the word &quot;all&quot; to denote that the scope of the Objective is not specifically constrained, such as limiting policy to a certain type of data or a certain location.</p>
+<p>Organizations are unique and likewise their appropriate level of maturity will vary based on their unique needs and risks. Readers can refer to the <a href="#example-scenarios">Example Scenarios</a> section in the Appendix for additional guidance on how to pick the appropriate levels of maturity for their organization.</p>
+<p>Additionally, Objectives and Practices are quite often interrelated and, therefore, feed into one another. For example, <strong>Identifying</strong> sensitive data will play a key role in <strong>Protecting</strong> data. Likewise, better <strong>Detect</strong> capabilities will often support enhanced <strong>Respond</strong> efforts. The model also supports feedback from later Objectives and Practices to earlier ones. For example, lessons learned from an incident review or detection should likely be incorporated into the policies that are implemented in the <strong>Protect</strong> phase.</p>
+<p>As data security is in a phase of rapid evolution, we also encourage active collaboration on the DSMM. Suggestions for updates to the model or inclusion of specific controls or methods can be shared at: <a href="mailto:suggestions@datasecurity.org">suggestions@datasecurity.org</a>.</p>
+<h2 id="key-terms" tabindex="-1"><a class="header-anchor" href="#key-terms" aria-hidden="true">#</a> Key Terms</h2>
+<p>The nomenclature for the DSMM is similar to that found in other, mainstream security frameworks and standards, especially the NIST Cybersecurity Framework and Cybersecurity Capability Maturity Model (C2M2).</p>
+<h3 id="functions" tabindex="-1"><a class="header-anchor" href="#functions" aria-hidden="true">#</a> Functions</h3>
+<p>provide a high-level, lifecycle-oriented view of an organization's management of cybersecurity – in this case, focusing specifically on data security and privacy.</p>
+<h3 id="objectives" tabindex="-1"><a class="header-anchor" href="#objectives" aria-hidden="true">#</a> Objectives</h3>
+<p>(alternately referred to as capabilities) are cybersecurity outcomes that are closely tied to programmatic needs. They are mid-level achievements that are accomplished by implementing the Practices that comprise them.</p>
+<h3 id="practices" tabindex="-1"><a class="header-anchor" href="#practices" aria-hidden="true">#</a> Practices</h3>
+<p>Are the most fundamental component of the DSMM. Each Practice is a brief statement describing a data security/privacy activity to be performed by an organization. The purpose of these activities is to achieve and sustain an appropriate level of security/privacy, commensurate with an organization's tolerance for risk and its overarching business objectives. Within each Objective, Practices are organized to progress along a maturity scale.</p>
+<h2 id="defining-data-security-program-goals" tabindex="-1"><a class="header-anchor" href="#defining-data-security-program-goals" aria-hidden="true">#</a> Defining Data Security Program Goals</h2>
+<p>The first step in any data security program is to specify the business strategy and goals for the organization.</p>
+<ul>
+<li>Identify the business priorities, and the way in which data security and privacy advance the business outcomes.</li>
+<li>Define the scope of data to be secured: this may be a manual process to determine what data is important to the business.Include any data that, if lost, exposed, or maliciously altered/corrupted, would pose a risk to the organization:
+<ul>
+<li>Data subject to geographical and industry-aligned regulatory compliance mandates</li>
+<li>Technical data protected and regulated by export control regulations</li>
+<li>Personally identifiable information (PII) and similar data that, if mishandled, could adversely impact brand reputation, customer acquisition, or customer retention</li>
+<li>Customer or partner data that may not be covered as part of regulatory mandates.</li>
+<li>Data that is operationally needed to produce goods and services.</li>
+<li>Company intellectual property (IP) and trade secrets.</li>
+</ul>
+</li>
+</ul>
+<h2 id="identify-and-classify" tabindex="-1"><a class="header-anchor" href="#identify-and-classify" aria-hidden="true">#</a> <strong>Identify and Classify</strong></h2>
+<p>This Function entails a set of core processes for continuously discovering the data that is in scope (i.e., is covered by the data security program); classifying it; and understanding the risk associated with the storage, processing or transfer of data. More specifically, risks include:</p>
+<ul>
+<li><strong>Data availability</strong> : information being lost or not available</li>
+<li><strong>Data integrity</strong> : Malicious and intended or accidental altering of data</li>
+<li><strong>Data confidentiality</strong> : Data being exposed to unauthorized entities</li>
+</ul>
+<p>The likelihood of a risk materializing, and its associated business impact depends on the type of data, its location, and whether or not the security team knows about it.</p>
+<p>This Function can involve a variety of technical tools as well as more staff-driven processes such as meeting with internal employees and leaders to identify important data for each business unit.</p>
+<p>Higher levels of maturity will force organizations to expand their Identify and Classify efforts beyond narrowly defined projects or regulatory requirements. This often requires leadership to take a more open-ended approach to how they assess data security and consider additional types of data or use cases that should be included in the data security program. However, the open-ended approach provides meaningful security and business outcomes by getting to and addressing the root causes of an organization's risk. In many cases, this leads to a reduction in security events and less work for security teams who can then shift from reactive efforts to a more proactive approach.</p>
+<p>The following set of questions can help leaders take a more comprehensive approach to their data security and uncover areas of risk that might not be initially obvious.</p>
+<ul>
+<li>
+<p>What data contains the organization's intellectual property or trade secrets? This may include direct forms of IP such as source code or design files, as well as more indirect sources such as emails, documents, and presentations for product plans, etc.</p>
+</li>
+<li>
+<p>What data would cause damage to the organization (financial, competitive, reputational, etc) if it were lost or exposed to the public?</p>
+</li>
+<li>
+<p>What data would be more valuable to an attacker than to the organization?</p>
+</li>
+<li>
+<p>How does the organization quantify the damage of a breach or data security event?</p>
+</li>
+<li>
+<p>How does the organization track the spread of data after it has been accessed? How are derivatives or copies of data identified?</p>
+</li>
+<li>
+<p>Is there a consistent approach for discovering/tracking sensitive data across data stores, user devices, applications, and cloud? Can the organization confirm if sensitive data was deleted on a user's device or is sitting in the recycle bin?</p>
+</li>
+<li>
+<p>How will the organization automatically classify sensitive data that may not conform to rules and signatures (e.g., non-patterned, non-textual, or other complex types of data)?</p>
+</li>
+<li>
+<p>To what extent should ongoing classification efforts be manual or automated? Will staff or end-users be required to perform classification functions?</p>
+</li>
+</ul>
+<h3 id="data-discovery" tabindex="-1"><a class="header-anchor" href="#data-discovery" aria-hidden="true">#</a> Data Discovery</h3>
+<p>The goal for this Objective is to find all data covered by the data security program. Achieving higher levels of maturity requires progressively expanding the scope of coverage, moving from narrowly focused or project-based data security efforts to a more holistic approach that can identify additional types of data critical to the organization. Level 1 will aim to identify data that already exists most of the time, while Level 3 will focus on ensuring data is properly identified and tagged at creation, using automation. For example, a retail organization may include well-known sources of sensitive data such as regulated customer PII as a standard element of Level 1. Higher levels of maturity could expand the scope of the data program to include data at rest discovery across all internal assets such as user laptops and additional data types such as M&amp;A plans, which may not be initially covered, but could have a massive business impact if compromised. The associated methods/tools also progress from ad-hoc and mostly manual to continuous and increasingly automated.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Implement focused discovery: often project-based,this process identifies known, well-defined, high-risk data sets (e.g., database with PII).</td>
+<td>Selective, reactive process - can include manual processes or automated tools such as tagging or other DDR tools capable of automatically tracing data based on provenance.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Employ expanded discovery based on goals at a business/organizational level. Includes discovery of other types of data important to the company, in additional locations. Encompasses less-structured data such as IP. Full understanding of what data is on which machines or apps, its age, and risk. Implement a data store review process into all projects to identify data usage for new initiatives</td>
+<td>Interview business or functional groups to identify data important to the organization.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Apply universal discovery, i.e., discovery by default. This continuous automated approach enables discovery of data not previously defined or recognized as sensitive. It gives visibility to drive new proactive policies and decisions.</td>
+<td>Use tools to identify newly created databases and data repositories and automatically integrate them into a corporate data inventory. <br/><br/>Uses tools such as automated data tracing of all data without relying on staff or user tagging. New data stores are created via automation and tagged appropriately.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-location-discovery-and-context" tabindex="-1"><a class="header-anchor" href="#data-location-discovery-and-context" aria-hidden="true">#</a> Data Location Discovery and Context</h3>
+<p>Finding the &quot;where&quot; of data creation, movement, and usage, including locations such as databases, file sharing apps, endpoints, and personal cloud apps. This objective focuses on answering two critical questions - where is all sensitive data located, and how did it get there? Data can often pass through a variety of entities, such as being shared by multiple users, stored in cloud applications, modified, and shared again. The ability to track this complex journey is an increasingly essential part of seeing and controlling an organization's true data risk. This may require the organization to develop methods to track how data is shared after it is accessed, including any copies or derivatives.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/Tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Discover project-based data in known locations.</td>
+<td>Manual processes (surveys, discussions).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Incorporate data found through expanded discovery, in unexpected locations (e.g., data sprawl).</td>
+<td>Automated discovery tools (e.g., DLP, shadow IT discovery).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Discover all in-scope data in all locations.</td>
+<td>Implement data tracing to maintain visibility over data stored in 3rd party systems.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-classification" tabindex="-1"><a class="header-anchor" href="#data-classification" aria-hidden="true">#</a> Data Classification</h3>
+<p>The goal of this Objective is to label/categorize in-scope data in a manner that reflects the relative degree of importance and/or sensitivity of the data to the organization and associated parties (e.g., customers, constituents, or other organizations that are the actual &quot;owners&quot; of the data).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/Tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Classify project-based data in known locations using top-down, organizational classifications (e.g., Public, Internal, Classified). Point-in-time classification.</td>
+<td>Manual (tagging, keywords, AIP/MIP labels).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Classify organizational in-scope data in all locations on a periodic basis.</td>
+<td>Automated classification tools based on content scanning either at rest or in transit.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Automatically classify all in-scope data in all locations by default. <br/><br/>Unclassified data is treated as a security event/alert, with root-cause analysis.</td>
+<td>Automated classification tools with provenance and enterprise context.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-risk-assessment" tabindex="-1"><a class="header-anchor" href="#data-risk-assessment" aria-hidden="true">#</a> Data Risk Assessment</h3>
+<p>The goal of this Objective is to identify areas of risk, and assess how much damage the loss, exposure, or malicious alteration of specific data elements/sets would cause to the business. The assessment takes into account factors such as data classification, data location/exposure, and the prevalence of threats, as well as the business processes and people/customers/constituents that are potentially impacted.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Assess likely impact and probability of data exposure/alteration due to data sprawl, known vulnerabilities and the organization's own experience of threats. Verify compliance of cloud and SaaS vendors.</td>
+<td>Manual review of key data data sources and protection policies. May include interviews with internal teams and stakeholders to identify any previous incidents.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Perform periodic assessment of risk, based on understanding of the external threat landscape.</td>
+<td>Provide a regular review of recent industry data incidents and popular attacker tactics, techniques, and procedures (TTPs) based on news, industry bulletins, and security alerts. Evaluate existing policies and protection mechanisms in context of these risks.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Continuous assessment to gain a complete understanding of all dimensions of data risk for all in-scope data. <br/><br/>Address data risks posed by trusted insiders at SaaS vendors, partners, and other elements of the extended data supply chain. Audit partner data security policies and controls to verify that sensitive data is properly protected from insider and outsider risks.</td>
+<td>Risk and threat modeling and analysis tools. <br/><br/>Data Protection Agreements, audit controls, logs, reports, and policies related to the organization's data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protect" tabindex="-1"><a class="header-anchor" href="#protect" aria-hidden="true">#</a> Protect</h2>
+<p>This Function entails implementing policies and practices to proactively minimize the exposure of important/sensitive data, in particular by controlling how it is accessed, used, and retained. This is a critical Function of the model as it covers the policies and procedures aimed at preventing data-related security events.</p>
+<p>The Objectives within Protect will often build on the previous work done in Identify and Classify. While Identify and Classify is designed to help map out an organization's data risk, Protect focuses on mitigating that risk. Most organizations will have multiple types of sensitive data, and the appropriate level of protection can naturally vary based on the type of data or business use case, as guided by the Data Risk Assessment Objective. In fact, a single piece of content may contain multiple types or classifications of sensitive data (e.g PII and PHI), and the organization may need to consider which protection rules should take precedence when protecting data. Ultimately, the Protect function will require organizations to directly consider their tolerance for risk as well as how security controls could potentially impact productivity.</p>
+<p><strong>Some key considerations may include:</strong></p>
+<ul>
+<li>
+<p>How will the organization define appropriate/allowed use for each type of sensitive data? By user, group, location, context, intent, other? Which data will be accessible by which users?</p>
+</li>
+<li>
+<p>How will data be protected after an initial access? Can data be copied and shared? What channels, applications or features should staff use when sharing sensitive data?</p>
+</li>
+<li>
+<p>How will organizations monitor and control common enterprise data flows (e.g. user to removable media, user to personal cloud, social media, backend SaaS integrations, and other cloud-to-cloud)?</p>
+</li>
+<li>
+<p>How will derivatives of data be tracked and protected (e.g,. an encrypted version of a sensitive document, a presentation that embeds a table from a sensitive spreadsheet, an email that contains copied/pasted content from a sensitive internal application, etc)?</p>
+</li>
+<li>
+<p>How will the organization address the risk of a user's device or credentials being compromised?</p>
+</li>
+<li>
+<p>How will the organization address the risk of user negligence or a malicious insider? For example, are the tools provided for data access built in a way that prevents massive amounts of data from being copied to local workstations?</p>
+</li>
+<li>
+<p>Will the policy allow for users to override a blocking decision in order to limit impacts to productivity? If so, how will this be administered and tracked?</p>
+</li>
+<li>
+<p>How will data be protected in cases where the data itself is not visible (such as due to encryption or archival)?</p>
+</li>
+<li>
+<p>What capabilities will be available to detect and prevent attempts to evade protection policies (e.g., changing file type/extensions, zipping files, etc)?</p>
+</li>
+</ul>
+<h3 id="controlling-access" tabindex="-1"><a class="header-anchor" href="#controlling-access" aria-hidden="true">#</a> Controlling Access</h3>
+<p>The goal of this Objective is to prevent unwanted/unnecessary access to in-scope data. Pursuing the principle of least privilege in this regard is an effective means of reducing the potential for downstream exposure/incidents.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/Tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Enforce ad-hoc policies using native application controls.</td>
+<td>Static access control lists based on user identities. Native application access and authorization.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Centralized access controls to establish consistent rules around what data can be accessed. Ensure ability to enforce fine-grained entitlements (e.g., all execs are allowed read-only access to company metrics spreadsheet but only the CFO can edit the sheet and see certain tabs.)</td>
+<td>Centralized user or role-based access. IAM and user provisioning tools.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dynamic access controls that adapt based on context or risk. Ensure ability to enforce risk-based authorization at user level, based on context of access (e.g., challenge for token code and image recognition when user accesses highest-value data from unknown device.) <br/><br/>Provide access to data via applications built to prevent high-volume copying of data.</td>
+<td>Dynamic, contextual access controls providing access based on attributes such as: endpoint configuration, patch status and connection origin. <br/><br/>Fine-grained entitlements tools. <br/><br/>Step-up authentication tools. <br/><br/>Data owner approval workflows</td>
+</tr>
+</tbody>
+</table>
+<h3 id="identifying-and-preventing-misuse" tabindex="-1"><a class="header-anchor" href="#identifying-and-preventing-misuse" aria-hidden="true">#</a> Identifying and Preventing Misuse</h3>
+<p>The goal of this Objective is to go beyond the principle of least privilege to further ensure that in-scope data is not used improperly – that is, in ways that violate policies or regulations, or that otherwise put the data at risk of being unnecessarily exposed. Measures should be taken not only to prevent accidental or intentional misuse or undesired movement of data by those users with a legitimate need to access/use it, but also to ensure that data cannot be used by attackers even if stolen.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/Tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Define clear data handling policies. Ensure violations of the policies are monitored for known sensitive data in known locations and any detected misuse is manually remediated by the security team. <br/><br/>Note: data handling policies may restrict locations for storing or channels for transmitting sensitive data, place restrictions on sharing the data inside or outside of the organization, or impose data retention requirements.</td>
+<td>Enterprise DLP, Platform DLP, CASB, Insider threat protection/detection — in monitor-only mode.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ensure data handling policies are enforced (i.e., block user upload to personal file sharing app) for all known sensitive data in both known and unknown locations. To further reduce the potential for misuse, ensure that data is tokenized, masked, or encrypted.</td>
+<td>Level 1 tools run in enforcement mode, plus tokenization, masking, and encryption.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Enforce data handling policies for all data and all of its derivatives (e.g., data converted into other formats or cut/pasted or embedded in other documents) OR prevent the creation of derivatives. Enforce controls for data even after it leaves approved locations or goes outside the organization.</td>
+<td>Level 2 plus DRM and Data Detection and Response tools that provide continuous tracing of all data and derivatives.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-education-and-feedback" tabindex="-1"><a class="header-anchor" href="#user-education-and-feedback" aria-hidden="true">#</a> User Education and Feedback</h3>
+<p>This Objective focuses on end-user training, coaching, and interaction to reduce risks and increase compliance with established policies. Organizations will need to balance policy enforcement and user productivity, which may require providing users with the ability to override a blocking decision or acknowledge a violation without blocking. Increasing levels of maturity are characterized in part by progressively broader options for enabling user inputs (overrides, policy/config change requests) based on business need and adjusting policies/settings accordingly.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Train users on the established policies for protecting data including what types of data are particularly sensitive and what applications and features are approved for handling sensitive data. <br/><br/>Ensure that users acknowledge established policies and are tested to verify that they have adequately understood the training. <br/><br/>Enable users with self-approved one-time override of data blocking policies/controls to facilitate and align with necessary business functions/practices.</td>
+<td>Periodic education and training. Can be delivered in a classroom setting or self-paced remote training.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Implement incident-based training and reinforcement based on policy violations. Document violations and identify corrective actions to avoid future violations. Enable users with workflow-governed override of data blocking policies/controls to facilitate and align with necessary business functions/practices.</td>
+<td>Detection of policy violations. Manual follow-up by an end-user's supervisor. <br/><br/>DLP.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Incorporate automated real-time coaching and user training. This includes contextual coaching within the end user's regular workflow without the need for manager intervention. <br/><br/>Enable users to provide feedback and justification where policies/settings may need to be adjusted to better align with business goals/practices and/or fine-tune how the organization protects sensitive data.</td>
+<td>Real-time training platforms or data security platforms, ideally featuring adaptive response capabilities.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>User education</strong> <br/>Traditional user education is broad-based and generally takes place only periodically – during onboarding, or a few times a year – and covers corporate security policies, anti-phishing, anti-malware, and other diverse categories. However, data exposure through accidental user events are a common cause of security incidents. Studies have proven that one of the most effective ways to change unwanted user behavior is via just-in-time, contextual training, which alerts users in real time when they are engaging in potentially risky behavior. This &quot;adaptive response&quot; allows users to interact, give feedback and learn about the proper data handling requirements. In turn, this can bring down the risk of unwanted data exposure by a factor of twenty.</p>
+</blockquote>
+<h3 id="data-retention" tabindex="-1"><a class="header-anchor" href="#data-retention" aria-hidden="true">#</a> Data Retention</h3>
+<p>The goal of this Objective is to reduce the risk of unwanted exposure, by proactively eliminating in-scope data that is no longer needed or out of date, or which data owners have requested be erased/removed from the organization's records. On the other hand, many regulations require records to be retained for defined periods of time (e.g., PCI-DSS, HIPAA, Fair Labor laws, etc). Data retention must balance the need to ensure unnecessary data is not retained while preventing other types of data from being inadvertently deleted.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/Tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Note: Driven by core regulatory requirements and basic best practices. <br/><br/><strong>Delete:</strong> Ensure that legal requirements for data retention and deletion have been identified. Enforce policies to ensure only the minimal amount of personal data is collected and stored in organizationally controlled locations. <br/><br/><strong>Retain:</strong> Build policies to properly archive and protect any regulated and sensitive data to avoid loss or inadvertent deletion.</td>
+<td>Data minimization and erasure, consent management tools. <br/><br/>Data protection policies, and manual data governance procedures.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Apply an automated and enterprise-wide approach to lifecycle management. Manage all copies of the data, not just in the central database. <br/><br/>Automatically enforce policies related to retention.</td>
+<td>Use of an enterprise document management solution to store and identify potentially outdated data and all copies.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Implement fully automated retention orchestration. Automatically enforce retention policies for all locations and for all in-scope data.</td>
+<td>Level 2 plus retention orchestration and automated erasure to standards. <br/><br/> Data has a lifecycle policy attached to it at creation, ensuring it CAN'T violate retention policies.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detect" tabindex="-1"><a class="header-anchor" href="#detect" aria-hidden="true">#</a> Detect</h2>
+<p>The Detect Function covers the collection and analysis of data to identify data-related security events or policy violations. While the preceding Protect Function focuses on preventative enforcement measures, the Detect Function aims to uncover risks or violations that were not stopped by Protect measures. However, Detect efforts should not be considered purely retrospective. It is critical for organizations to detect risks and threats as early as possible, in order to minimize any impacts.</p>
+<p>Detect efforts can include the discovery of risky or anomalous behaviors (e.g., unusual data downloads, risky application usage) as well as direct, first-order incidents (e.g., data leakage, unauthorized copies of sensitive data) related to usage and movement of in-scope data.</p>
+<p>Organizations will want to consider a variety of factors with regard to their Detect maturity level including:</p>
+<ul>
+<li>
+<p>What are the goals in terms of time-to-detection (Near real-time? Hours? Days) and how do they vary based on the defined dataset?</p>
+</li>
+<li>
+<p>What data or signals are available for analysis in addition to logs and events captured by Protect controls? User access logs? Security events? Packet/flow capture? Endpoint and host logs?</p>
+</li>
+<li>
+<p>How will the organization identify and track behaviors or anomalies at the network or endpoint level? What systems or methods are or will be used to support this effort?</p>
+</li>
+<li>
+<p>What additional data or signal is required in order to reliably identify risks and how can these gaps be addressed?</p>
+</li>
+<li>
+<p>What methods will the organization use for data analysis (e.g., correlation, data analytics, flow analysis, machine learning, graph analysis, etc.)? What systems or tools will be used for these efforts (e.g., SIEM, analytics platforms, homegrown analysis tools)?</p>
+</li>
+<li>
+<p>How much time and effort will be required of staff in order to perform deeper analysis and triage? What is the team's tolerance for false positives and false negatives? How much effort is required to detect false positives?</p>
+</li>
+</ul>
+<h3 id="signal-collection" tabindex="-1"><a class="header-anchor" href="#signal-collection" aria-hidden="true">#</a> Signal Collection</h3>
+<p>The purpose of this Function is to collect data/telemetry that can be used to reveal data security events, policy violations, or anomalies. Telemetry sources should focus on the access, movement, or modification of in-scope data. They should provide additional context, and/or enable staff to verify events or hunt for additional risks or violations.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Collect logs and alerts, including: <br/>- Content attribute matches (content) <br/>- User access logs (user) <br/>- Violation events</td>
+<td>Manual triage of logs and incident invocation <br/>(where applicable)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Record data movement events and behaviors for priority enterprise applications (application and user actions). This could include recording user actions when using data in a cloud application or on a host device such as editing or renaming a file, copying/pasting data, uploading/downloading, etc. Record data lineage across user actions and behaviors to maintain context. <br/><br/>Incorporate risk and threat data from external sources to identify threat families and techniques targeting data. <br/><br/> Collect additional data that can be valuable for analytics and anomaly detection. This may include data not limited to security events (e.g. network logs, network flows, data access and application logs, etc).</td>
+<td>DRM, data lineage tools, DDR tools. <br/><br/>DLP <br/><br/>External threat feeds, risk sources. <br/><br/>Other logging tools.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Collect all user actions across all applications (including both unmanaged/personal and managed/corporate applications). <br/><br/>Record data lineage across multiple applications and locations (e.g., relate data copied/pasted from database to a presentation.)</td>
+<td>DDR tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analysis-methods" tabindex="-1"><a class="header-anchor" href="#analysis-methods" aria-hidden="true">#</a> Analysis Methods</h3>
+<p>This Objective is based on a range of increasingly sophisticated and automated techniques and technologies to process/analyze collected signals for the purpose of uncovering data movement or modification that represents a threat to data security or privacy.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Implement signature- and rule-based detection models based on pattern matching (regular expression) or defined metadata or tags. <br/><br/>Use these techniques to detect the movement of sensitive data and to find previously undiscovered data in unsanctioned locations.</td>
+<td>IDS, DLP, File system auditing, CASB, SIEM/automated log review.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Implement data analytics and log correlation of multiple data sources including data from applications, users, and systems. <br/><br/>Leverage multiple data sources to baseline activity and identify event-based anomalous behavior (e.g., unusual download sizes). <br/><br/> Note that these practices provide limited coverage of evasion techniques (encryption, file format conversion, etc.) used. <br/><br/>Use of &quot;honey&quot; data, which are fake data entries that are never to be used, to detect malicious or accidentally policy violating data movement.</td>
+<td>NDR, UBA, SIEM, SOAR, data tracing, honey data.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Perform advanced analysis based on full enterprise lineage of data including data provenance, all application and user behaviors. <br/><br/>Apply AI models to identify potentially malicious actions based on multiple dimensions of user behaviors.</td>
+<td>AI/ML/deep learning, graph analysis</td>
+</tr>
+</tbody>
+</table>
+<h2 id="respond" tabindex="-1"><a class="header-anchor" href="#respond" aria-hidden="true">#</a> Respond</h2>
+<p>This Function focuses on immediate, short-term actions to be taken upon detection of a potential incident. Key objectives include validating and establishing the scope of the incident, taking steps to minimize/halt the impact, and maintaining communication with business stakeholders and other affected parties.</p>
+<p>For organizations that already have solid processes, procedures, and toolsets in place to respond to cybersecurity incidents, those capabilities will remain applicable and, ideally, should be re-used extensively. Adjustments and augmentation will almost certainly be needed, however, to increase the focus on in-scope data – effectively putting it at the center of many of the response activities and decisions being made. Higher levels of maturity will result primarily from increasing levels of automation (i.e., efficiency, accuracy, and speed) for all aspects of the Function: incident validation, scope and impact assessment, and mitigation.</p>
+<p>The following questions can help initiate the shift to a more data-centric approach to incident response.</p>
+<ul>
+<li>Is there a clear definition/plan identifying all stakeholders (both internal and external) and other parties (e.g., legal counsel) that should be involved when responding to an incident involving in-scope data? Does it include those who should be notified (and when) regarding pertinent details?</li>
+<li>Is there a clear understanding of the requirements (and possibly restrictions) stemming from applicable data protection laws and regulations that need to be accounted for in your response plans and activities?</li>
+<li>Do the tools already in place to support incident response provide sufficient visibility of and control over the data itself?</li>
+<li>Are the steps typically being taken to mitigate an incident effective down to the data level?</li>
+<li>Has sufficient consideration been given to the need to find a balance between maintaining essential business operations/functions and the impact of potential options for mitigating an incident (e.g., blocking a user or locking down a data repository)?</li>
+<li>Is the type of data that is being impacted a consideration when it comes to the potential participants in the response process, as well as those who will be informed of the relevant issues and outcomes?</li>
+</ul>
+<h3 id="triage-and-mitigation" tabindex="-1"><a class="header-anchor" href="#triage-and-mitigation" aria-hidden="true">#</a> Triage and Mitigation</h3>
+<p>The purpose of this Objective is to establish the magnitude of the data security incident and take appropriate steps to minimize impact. Related practices apply not only to incidents involving internal/insider misuse of data, but also those involving external/malicious exfiltration of data.</p>
+<p>It would be nice to have these be more data specific</p>
+<table>
+<thead>
+<tr>
+<th><strong>Levels</strong></th>
+<th><strong>Practices</strong></th>
+<th><strong>Methods/tools</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Incidents are reported manually by customers, employees, service providers, or others. <br/><br/>Incident response plans include specific steps for identifying the data impacted and tailoring response and reporting requirements. <br/><br/>Incident responders have access to a mapping of data source to data owner and owners are trained on their responsibilities during an incident. <br/><br/>Mitigate by blocking access or otherwise stopping unwanted activity; primarily manually initiated.</td>
+<td>Log management tools, SIEM. <br/><br/>Manual efforts for validating scope and assessing impact. <br/><br/>Ability to manually suspend/revoke access to network and individual systems.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Incidents are reported manually, but may also be detected automatically by rules-, signature-, or behavior-based tools. <br/><br/>Automated correlation tools enrich data to help analysts quickly identify impacted systems, users, and data. <br/><br/>Automate user/device-centric mitigation and containment, such as: <br/><br/>- Blocking access to data <br/>- Blocking access to external <br/>- Fully isolating/disabling offending user/device <br/><br/>Ensure collection and preservation of forensic data.</td>
+<td>UEBA, XDR, event correlation. <br/><br/>Ability to effectively isolate systems.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Execute fully automated IR narrative (i.e., push-button ability to view all details related to scope and impact, along with responses already taken and recommended). <br/><br/>Implement orchestrated/automated mitigation responses including user suspension, system quarantine, and leaked data sanitization.</td>
+<td>SOAR, Open-XDR, automated incident response tools, DDR.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="communications" tabindex="-1"><a class="header-anchor" href="#communications" aria-hidden="true">#</a> Communications</h3>
+<p>This Objective entails engaging and coordinating response activities with applicable business stakeholders, notifying relevant external parties (e.g., partners, customers) of pertinent details, and taking any other actions required for regulatory/legal compliance.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Implement a single, reactive communication plan that is activated during incident response and details participants/members, roles, legal/compliance requirements, communication mechanisms, and timeframes.<br/><br/>Applies to internal stakeholders (including legal team), affected external parties, law enforcement agencies, and regulatory authorities.<br/><br/>Coordinate and communicate response and recovery activities among key stakeholders and affected/essential business partners.<br/><br/>Perform incident/breach notifications and updates within prescribed time frames for applicable jurisdictions (i.e., regulatory driven) and contractual agreements (i.e., business driven). <br/><br/>Engage and cooperate with relevant authorities on investigative, forensic preservation, and disclosure processes.<br/><br/>Manage related public relations activities.</td>
+<td>Mostly manual.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Implement multiple communication plans (or modules) by type/class of incident. <br/><br/>Includes proactive, voluntary information-sharing with key business partners, extended supply chain, unaffected customers/constituents (when deemed appropriate), and infosec community at large to enable greater, collective situational awareness.<br/><br/>Reputation is proactively repaired after an incident.</td>
+<td>Extensive automation of notification plans and processes. <br/><br/>Intelligence sharing portal/platform (i.e., reverse feed).</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Reserved for future development.</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="recover-and-improve" tabindex="-1"><a class="header-anchor" href="#recover-and-improve" aria-hidden="true">#</a> Recover and Improve</h2>
+<p>This Function encompasses those actions taken not only to restore normal operations (as they pertain specifically to data), but also to build back stronger. An overarching goal for any organization should be to evolve its overall data security program regularly and steadily. Core objectives include data backup and recovery, identifying and incorporating lessons learned, and adaptive user education.</p>
+<p>Key questions that help to further frame this Function and serve as a jumping off point for building it out are as follows.</p>
+<ul>
+<li>Does the organization have a policy for data backup and recovery? Does the policy cover all in-scope data?</li>
+<li>How fast is the organization able to restore data in a &quot;worst-case scenario&quot; situation?</li>
+<li>Does the organization have a way (procedural or technical) to control the locations where backups reside and how they are able to be used and/or transferred?</li>
+<li>Does the organization know the retention period for the backups and logs captured by their security/DLP solution?</li>
+<li>To what extent does the organization examine the cause of incidents affecting in-scope data, and subsequently take action to prevent them from happening again? Does the organization look for proximate cause only, or perform root-cause analysis? Does it implement proximate remedy only, or systematic fixes that extend coverage to prevent an entire class of incidents across all systems that could be affected?</li>
+<li>Does the organization have a policy/process to periodically reevaluate its data security program from top to bottom?</li>
+<li>Does the organization have cyber insurance coverage and a policy or process to periodically reevaluate it?</li>
+<li>How are users made aware of data security and privacy policies? How are they trained on those policies? To what extent are they able to override those policies, or request/recommend changes to them in order to align with necessary business activities/functions?</li>
+<li>What mechanisms are in place to take advantage of the data security practices/knowledge of peer organizations or the security industry/community at large?</li>
+</ul>
+<h3 id="data-backup-and-recovery" tabindex="-1"><a class="header-anchor" href="#data-backup-and-recovery" aria-hidden="true">#</a> Data Backup and Recovery</h3>
+<p>With this Objective the goal is to ensure that in-scope data is regularly backed up and capable of being restored when needed. In this case, what is being protected – or more accurately preserved – is not the data itself, but rather the business processes that rely on it.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Define sanctioned backup tools and locations. <br/><br/>Ensure backups of in-scope data are conducted, maintained, and tested.<br/><br/>Ensure retention of multiple versions of data. <br/><br/>Restore from backup as needed (i.e., in response to an incident that impacts data integrity or availability). <br/><br/>Ensure isolation at off-site, offline storage locations.</td>
+<td>Backup and recovery tools.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prevent backups to non-approved locations or applications (e.g., employee's personal backup). <br/><br/>Control backups on a per-file and per-account basis (e.g., prevent users from backing up data to personal Dropbox instead of corporate location).<br/><br/>Ensure backups are encrypted, and that encryption keys are stored in a redundant, non-deletable way, with strict access control.<br/><br/>Ensure and verify retention of data in cloud/SaaS applications.<br/><br/>Ensure compliance and ability to delete the data in cloud and SaaS backups based on user request or regulatory requirement.<br/><br/>Establish back-up policies based on specific use cases (e.g. data relevant to a legal case may require raw data to be preserved for an extended period of time).<br/><br/>Back-ups of IaaS environments is done towards separate IaaS accounts, using system accounts that have write-only privileges, to prevent even a compromised administrator account from deleting the data and backups at once.</td>
+<td>Backup and recovery tools.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Reserved for future development</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="incident-review-lessons-learned" tabindex="-1"><a class="header-anchor" href="#incident-review-lessons-learned" aria-hidden="true">#</a> Incident Review / Lessons Learned</h3>
+<p>For this Objective, the intent is to assess both the cause and handling of data security incidents, for the purpose of identifying areas for improvement within each of the other Functions. Findings and corrective measures are then incorporated in relevant Functions to avoid repeat episodes of similar incidents and strengthen data security/privacy posture overall.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Perform incident-specific review &amp; adjustments for high- and medium-severity incidents. <br/><br/>Adjust/fix policies, practices, and configuration settings of technical countermeasures to prevent occurrence of similar incidents going forward.</td>
+<td>Primarily a manual exercise. <br/><br/>SIEM.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Extend incident-specific review and adjustments to cover all severity levels. <br/><br/>Perform root-cause analysis for high/medium severity incidents to uncover and fix upstream issues that caused the associated data to be at risk in the first place (e.g., role sprawl; insufficiently granular roles or policies; etc.)</td>
+<td>Technology-based facilitation of appropriate adjustments/fixes (e.g., system proposes changes, but operator reviews and manually implements). May include SIEM, SOAR, DDR, and NDR tools, or other security or network management tools.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Extend scope for root cause analysis to cover all severity levels. <br/><br/>Ensure adjustments/fixes are applicable enterprise-wide and are inclusive of all incidents of similar type/class, other root causes, and across other apps/systems. Example: after analyzing a data violation from a user sending data over personal GMail, the company may enforce policies to distinguish personal vs corporate GMail and also apply those lessons to other applications such as Dropbox. <br/><br/>Reassess implementation of security model and adjust controls and target levels as needed.</td>
+<td>SIEM, SOAR. Orchestration / automation of appropriate adjustments/fixes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collaboration-and-research" tabindex="-1"><a class="header-anchor" href="#collaboration-and-research" aria-hidden="true">#</a> Collaboration and Research</h3>
+<p>This Objective involves taking additional steps, both within and beyond the organization, to continuously improve its data security practices. The purpose is to account for macro-level changes not only to the organization and how it operates, but also those affecting the broader threat, security technology, and business landscapes.</p>
+<table>
+<thead>
+<tr>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Maintain constant communication with all key functions of the organization and adapt data security objectives to evolving business goals. <br/><br/>Monitor and account for ongoing changes to the threat landscape, e.g., by leveraging advanced threat intelligence sources providing insights into the evolution of threats, threat actors, and their tactics, techniques, and procedures (TTPs).<br/><br/>Achieve/maintain relevant certifications for internal security team/practitioners, e.g., ISC2 CISSP, ISACA CISM/CISA, CompTIA CySA+, EC-council Certified Ethical Hacker (CEH).</td>
+<td>Quarterly data security/privacy reviews with line-of-business leaders. <br/><br/>Customized threat intelligence feeds.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Monitor and account for the emergence of new security technologies and innovations. <br/><br/>Share (/obtain) information on threats, practices, and lessons learned with (/from) industry peers and associations.</td>
+<td>Primarily manual. <br/><br/>Threat intelligence platform; ISAC participation; Automated Indicator Sharing.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Investigate, adapt, and adopt concepts and technologies from other markets (e.g., graph analytics).</td>
+<td>Primarily manual.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix" tabindex="-1"><a class="header-anchor" href="#appendix" aria-hidden="true">#</a> Appendix</h2>
+<h3 id="getting-started-with-dsmm" tabindex="-1"><a class="header-anchor" href="#getting-started-with-dsmm" aria-hidden="true">#</a> Getting Started with DSMM</h3>
+<p>The Data Security Maturity Model helps organizations protect their data and critical assets by developing a data-centric approach to security, ensuring that risk context and policy enforcement follow the data no matter how it moves or is modified. This ability to protect any type of data across devices, applications, and cloud assets is essential if organizations are to take advantage of the power of modern collaboration and digital transformations without exposing their data to external threats, insider threats, or simple mistakes.</p>
+<p>The DSMM is organized into five key Functions – <strong>Identify and Classify</strong> , <strong>Protect</strong> , <strong>Detect</strong> , <strong>Respond</strong> , and <strong>Recover and Improve</strong>. Each Function covers multiple underlying Objectives, which focus on a particular aspect of security that supports the higher level Function.</p>
+<p>While the DSMM provides the details of each Function, this Appendix provides a guide to the overall process so that organizations can get started easily and improve their data security posture quickly.</p>
+<h3 id="assess-organizational-data-needs" tabindex="-1"><a class="header-anchor" href="#assess-organizational-data-needs" aria-hidden="true">#</a> Assess Organizational Data Needs</h3>
+<p>Every organization is unique both in terms of data real estate and tolerance for risk. The Data Security Maturity Model is designed to adapt to the needs of each organization. The appropriate maturity level for each objective will vary based on each organization's unique risk profile.</p>
+<p>However, many data security programs have long been constrained by the limitations of old-school security tools – often limiting data security to narrowly defined DLP and regulatory use cases. Recent innovations in data security technologies enable organizations to apply data security controls far more universally than ever before, including the ability to protect any data, in any location, and at any time. As such, it is important - from both a security and a business point of view - to take a fresh look at the organization through the lens of its data. This means evaluating all of the organization's data assets in terms of the impact of that data being lost, exposed, or otherwise misused or rendered unavailable. As a result, organizations may want to take the following steps:</p>
+<ul>
+<li>Collaborate with all business units to identify the data critical to each group or operational function.</li>
+<li>Identify all intellectual property and trade secrets regardless of data or file type.</li>
+<li>For each type of data, assess the competitive, financial, and reputational impact if the data were exposed or unavailable.</li>
+</ul>
+<h3 id="identify-target-data-security-levels-and-identify-gaps" tabindex="-1"><a class="header-anchor" href="#identify-target-data-security-levels-and-identify-gaps" aria-hidden="true">#</a> Identify Target Data Security Levels and Identify Gaps</h3>
+<p>The assessment done in Step 1 is the foundation for using the model, since it answers the question of precisely what data is in scope for the model. Based on this assessment, organizations will next address each of the key Functions of the maturity model. For each Function, several Objectives are presented, containing (generally) three Levels of maturity. Each ascending Level introduces an improvement in the accuracy and reliability of meeting the Objective and/or an increase in the scope of the Objective. For example, Level 1 Discovery covers manual identification and tagging of data in select locations or databases, while Level 3 calls for the automated discovery of all sensitive information in all locations.</p>
+<p>It is important to note that organizations will likely have different target levels of maturity for various types of data and use cases. For example, source code or product designs may warrant Level 3 for the &quot;Preventing Misuse&quot; objective, while internal HR data may only require Level 2. Refer to the <a href="#example-scenarios">Example Scenarios</a> section below for more detailed examples of how to align target levels of data security maturity to the needs and risks of an organization.</p>
+<p>Once the appropriate targets are defined, the team will need to evaluate their existing security processes and tools to identify potential gaps that will be addressed in the following step.</p>
+<h3 id="develop-and-implement-the-data-security-plan" tabindex="-1"><a class="header-anchor" href="#develop-and-implement-the-data-security-plan" aria-hidden="true">#</a> Develop and Implement the Data Security Plan</h3>
+<p>Based on the previous analysis, the organization can build a coordinated plan to reach the needed Level of maturity for each data type or use case. For each Objective and maturity Level, the DSMM identifies methods and tools that can be used to achieve the target goal. However, these are provided as examples only, and should not be considered an exhaustive list or the only ways that an organization can achieve the appropriate level of maturity.</p>
+<p>Teams should evaluate any newly implemented controls to ensure they are functioning properly and delivering the desired effect.</p>
+<p>Once deployed, organizations should continue to monitor the efficacy of the program and regularly re-evaluate their data security program to adapt to changing workflows, data usage, and business needs.</p>
+<h2 id="example-scenarios" tabindex="-1"><a class="header-anchor" href="#example-scenarios" aria-hidden="true">#</a> Example Scenarios</h2>
+<p>Naturally, not every organization will need to be at Level 3 or even Level 2 for all Objectives. The appropriate Objectives should be defined based on each organization's business needs and tolerance for risk. An organization can reasonably be content at Level 3 in one area and at Level 1 in others. The following scenarios provide some examples of how an organization's need might align to various target levels of maturity.</p>
+<h3 id="scenario-1" tabindex="-1"><a class="header-anchor" href="#scenario-1" aria-hidden="true">#</a> Scenario 1</h3>
+<p>Online health service provides health and genetic testing by mail, and provides a centralized portal for customers to review their results and recommendations. Due to the sensitive nature of patient and regulatory requirements (e.g., HIPAA, PCI, GDPR), protecting customers is the #1 priority for the firm.</p>
+<p>In this case, the primary dataset that the firm will focus on is quite well-defined. Since the data is relatively well-known, data discovery and classification may not be a top priority. The organization may start with a target of Level 1 for Identify and Classify or may need to target Level 2 to address any cloud-to-cloud sharing or to identify potential misuse of sensitive data by the firm's internal administrators. However, the ability to protect data and respond to incidents will be a clear priority and the organization will target Level 3 for these functions.</p>
+<ul>
+<li><strong>Identify and Classify -</strong> Level 1 or 2</li>
+<li><strong>Protect -</strong> Level 3</li>
+<li><strong>Detect -</strong> Level 2</li>
+<li><strong>Respond -</strong> Level 3</li>
+<li><strong>Recover and Improve -</strong> Level 1 or 2</li>
+</ul>
+<h3 id="scenario-2" tabindex="-1"><a class="header-anchor" href="#scenario-2" aria-hidden="true">#</a> Scenario 2</h3>
+<p>Technology Integrator and Services firm develops and implements a variety of proprietary software solutions for its clients. Each project is highly customized and confidential and tied to specific dedicated teams. Projects can also be relatively dynamic as team members regularly rotate on and off a project when needs change. The firm deals with a wide range of sensitive data including source code, product designs, and development plans, as well as sensitive customer communications.</p>
+<p>In this case the firm must protect a wide range of datatypes in which many users will need to interact with the data. This will require the organization to target Level 3 of <strong>Identify</strong>** and Classify <strong>in order to identify many types of data that will naturally be distributed across many endpoints, applications, and cloud services.</strong> Protect <strong>and</strong> Detect <strong>efforts will also be at Level 3 in order to prevent the loss of sensitive data either due to external threats, malicious insiders, or internal errors. However, achieving Level 2 for</strong> Respond <strong>and</strong> Recover** may be acceptable based on the organization's risk tolerances.</p>
+<ul>
+<li><strong>Identify and Classify -</strong> Level 3</li>
+<li><strong>Protect -</strong> Level 3</li>
+<li><strong>Detect -</strong> Level 3</li>
+<li><strong>Respond -</strong> Level 2</li>
+<li><strong>Recover and Improve -</strong> Level 2</li>
+</ul>
+</div></template>
+
+

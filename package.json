@@ -1,0 +1,15 @@
+{
+  "name": "dsmm",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "next"
+  },
+  "dependencies": {
+    "@vuepress/plugin-pwa": "next",
+    "@vuepress/plugin-search": "next"
+  }
+}

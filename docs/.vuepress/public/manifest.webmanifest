@@ -1,0 +1,21 @@
+{
+  "name": "Data Security Maturity Model",
+  "short_name": "DSMM",
+  "description": "The first security framework focused on data. We're working to define what capabilities are needed to secure data in our world today.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#0070fe",
+  "icons": [
+    {
+      "src": "/images/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ]
+}
