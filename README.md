@@ -1,11 +1,28 @@
 # Data Security Maturity Model (DSMM)
 
 
-## About 
+## About
 
-This project is built using [VuePress 2](https://v2.vuepress.vuejs.org/). Markdown documents can be found in the following folder:
+This project is built using [VuePress 2](https://v2.vuepress.vuejs.org/).
+
+Markdown documents can be found in the following folder:
 
     /docs/
 
-TODO: Instructions on build 
-TODO: Test GitHub page build 
+## Requirements
+
+- [NdoeJS](https://nodejs.org/en/) to run the project locally and build to static document site. 
+- [Yarn](https://yarnpkg.com/getting-started/install) package manager to install dependence.
+
+## Development Run
+
+    yarn
+    npm run docs:dev
+
+## Production build
+
+    yarn
+    npm run docs:build
+
+
+TODO: Implement correct GitHub pages build (needs changing for yarn)

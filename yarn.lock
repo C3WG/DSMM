@@ -2284,16 +2284,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"DSMM@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "DSMM@workspace:."
-  dependencies:
-    "@vuepress/plugin-pwa": next
-    "@vuepress/plugin-search": next
-    vuepress: next
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -2911,6 +2901,16 @@ __metadata:
   checksum: fa05e18324510d7283f55862f3161c6759a3f2f8dbce491a2fc14c8324c498286c54282c1f0e933cb930da8419b30679389499b919122952a4f8592362ef4615
   languageName: node
   linkType: hard
+
+"dsmm@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dsmm@workspace:."
+  dependencies:
+    "@vuepress/plugin-pwa": next
+    "@vuepress/plugin-search": next
+    vuepress: next
+  languageName: unknown
+  linkType: soft
 
 "ejs@npm:^3.1.6":
   version: 3.1.8

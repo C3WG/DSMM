@@ -17,6 +17,8 @@ node_modules/*
 .idea
 .idea/*
 .editorconfig
+
+# Vuepress Temp / Cache
 docs/.vuepress/.cache
 docs/.vuepress/.cache/*
 docs/.vuepress/.temp

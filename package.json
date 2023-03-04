@@ -1,5 +1,7 @@
 {
   "name": "dsmm",
+  "version": "1.0.0",
+  "author": "C3WG",
   "packageManager": "yarn@3.2.1",
   "scripts": {
     "docs:dev": "vuepress dev docs",
