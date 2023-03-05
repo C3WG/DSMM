@@ -11,7 +11,7 @@
 .yarn/cache
 #.pnp.*
 '.cache'
-.temp'
+'.temp'
 node_modules
 node_modules/*
 .idea
@@ -19,7 +19,10 @@ node_modules/*
 .editorconfig
 
 # Vuepress Temp / Cache
-docs/.vuepress/.cache
-docs/.vuepress/.cache/*
-docs/.vuepress/.temp
-docs/.vuepress/.temp/*
+.temp
+.temp/*
+.cache
+.cache/*
+
+# Docs dist directory
+/vuepress
