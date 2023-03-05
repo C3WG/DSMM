@@ -1,5 +1,5 @@
 <template><div><h1 id="data-security-maturity-model" tabindex="-1"><a class="header-anchor" href="#data-security-maturity-model" aria-hidden="true">#</a> Data Security Maturity Model</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#scope-and-purpose">Scope and Purpose</router-link></li><li><router-link to="#why-use-dsmm">Why use DSMM</router-link></li><li><router-link to="#how-to-navigate-the-model">How to Navigate the Model</router-link></li><li><router-link to="#key-terms">Key Terms</router-link><ul><li><router-link to="#functions">Functions</router-link></li><li><router-link to="#objectives">Objectives</router-link></li><li><router-link to="#practices">Practices</router-link></li></ul></li><li><router-link to="#defining-data-security-program-goals">Defining Data Security Program Goals</router-link></li><li><router-link to="#identify-and-classify">Identify and Classify</router-link><ul><li><router-link to="#data-discovery">Data Discovery</router-link></li><li><router-link to="#data-location-discovery-and-context">Data Location Discovery and Context</router-link></li><li><router-link to="#data-classification">Data Classification</router-link></li><li><router-link to="#data-risk-assessment">Data Risk Assessment</router-link></li></ul></li><li><router-link to="#protect">Protect</router-link><ul><li><router-link to="#controlling-access">Controlling Access</router-link></li><li><router-link to="#identifying-and-preventing-misuse">Identifying and Preventing Misuse</router-link></li><li><router-link to="#user-education-and-feedback">User Education and Feedback</router-link></li><li><router-link to="#data-retention">Data Retention</router-link></li></ul></li><li><router-link to="#detect">Detect</router-link><ul><li><router-link to="#signal-collection">Signal Collection</router-link></li><li><router-link to="#analysis-methods">Analysis Methods</router-link></li></ul></li><li><router-link to="#respond">Respond</router-link><ul><li><router-link to="#triage-and-mitigation">Triage and Mitigation</router-link></li><li><router-link to="#communications">Communications</router-link></li></ul></li><li><router-link to="#recover-and-improve">Recover and Improve</router-link><ul><li><router-link to="#data-backup-and-recovery">Data Backup and Recovery</router-link></li><li><router-link to="#incident-review-lessons-learned">Incident Review / Lessons Learned</router-link></li><li><router-link to="#collaboration-and-research">Collaboration and Research</router-link></li></ul></li><li><router-link to="#appendix">Appendix</router-link><ul><li><router-link to="#getting-started-with-dsmm">Getting Started with DSMM</router-link></li><li><router-link to="#assess-organizational-data-needs">Assess Organizational Data Needs</router-link></li><li><router-link to="#identify-target-data-security-levels-and-identify-gaps">Identify Target Data Security Levels and Identify Gaps</router-link></li><li><router-link to="#develop-and-implement-the-data-security-plan">Develop and Implement the Data Security Plan</router-link></li></ul></li><li><router-link to="#example-scenarios">Example Scenarios</router-link><ul><li><router-link to="#scenario-1">Scenario 1</router-link></li><li><router-link to="#scenario-2">Scenario 2</router-link></li></ul></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#scope-and-purpose">Scope and Purpose</router-link></li><li><router-link to="#why-use-dsmm">Why use DSMM</router-link></li><li><router-link to="#how-to-navigate-the-model">How to Navigate the Model</router-link></li><li><router-link to="#key-terms">Key Terms</router-link><ul><li><router-link to="#functions">Functions</router-link></li><li><router-link to="#objectives">Objectives</router-link></li><li><router-link to="#practices">Practices</router-link></li></ul></li><li><router-link to="#defining-data-security-program-goals">Defining Data Security Program Goals</router-link></li><li><router-link to="#identify-and-classify">Identify and Classify</router-link><ul><li><router-link to="#data-discovery">Data Discovery</router-link></li><li><router-link to="#data-location-discovery-and-context">Data Location Discovery and Context</router-link></li><li><router-link to="#data-classification">Data Classification</router-link></li><li><router-link to="#data-risk-assessment">Data Risk Assessment</router-link></li></ul></li><li><router-link to="#protect">Protect</router-link><ul><li><router-link to="#controlling-access">Controlling Access</router-link></li><li><router-link to="#identifying-and-preventing-misuse">Identifying and Preventing Misuse</router-link></li><li><router-link to="#user-education-and-feedback">User Education and Feedback</router-link></li><li><router-link to="#data-retention">Data Retention</router-link></li></ul></li><li><router-link to="#detect">Detect</router-link><ul><li><router-link to="#signal-collection">Signal Collection</router-link></li><li><router-link to="#analysis-methods">Analysis Methods</router-link></li></ul></li><li><router-link to="#respond">Respond</router-link><ul><li><router-link to="#triage-and-mitigation">Triage and Mitigation</router-link></li><li><router-link to="#communications">Communications</router-link></li></ul></li><li><router-link to="#recover-and-improve">Recover and Improve</router-link><ul><li><router-link to="#data-backup-and-recovery">Data Backup and Recovery</router-link></li><li><router-link to="#incident-review-lessons-learned">Incident Review / Lessons Learned</router-link></li><li><router-link to="#collaboration-and-research">Collaboration and Research</router-link></li></ul></li><li><router-link to="#about-the-c3-working-group">About the C3 Working Group</router-link><ul><li><router-link to="#chair">Chair</router-link></li><li><router-link to="#members">Members</router-link></li></ul></li><li><router-link to="#appendix">Appendix</router-link><ul><li><router-link to="#getting-started-with-dsmm">Getting Started with DSMM</router-link></li><li><router-link to="#assess-organizational-data-needs">Assess Organizational Data Needs</router-link></li><li><router-link to="#identify-target-data-security-levels-and-identify-gaps">Identify Target Data Security Levels and Identify Gaps</router-link></li><li><router-link to="#develop-and-implement-the-data-security-plan">Develop and Implement the Data Security Plan</router-link></li></ul></li><li><router-link to="#example-scenarios">Example Scenarios</router-link><ul><li><router-link to="#scenario-1">Scenario 1</router-link></li><li><router-link to="#scenario-2">Scenario 2</router-link></li></ul></li></ul></nav>
 <h2 id="scope-and-purpose" tabindex="-1"><a class="header-anchor" href="#scope-and-purpose" aria-hidden="true">#</a> Scope and Purpose</h2>
 <p>The Data Security Maturity Model (DSMM) helps organizations protect their data and critical assets by developing a data-centric approach to security. Overall, the DSMM shares a similar structure with some of the most well-known security frameworks in the industry, most notably the NIST Cybersecurity Framework. This will hopefully allow organizations to integrate it more easily into their existing security and privacy efforts and augment their investment in other frameworks.</p>
 <h2 id="why-use-dsmm" tabindex="-1"><a class="header-anchor" href="#why-use-dsmm" aria-hidden="true">#</a> Why use DSMM</h2>
@@ -93,17 +93,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Implement focused discovery: often project-based,this process identifies known, well-defined, high-risk data sets (e.g., database with PII).</td>
 <td>Selective, reactive process - can include manual processes or automated tools such as tagging or other DDR tools capable of automatically tracing data based on provenance.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Employ expanded discovery based on goals at a business/organizational level. Includes discovery of other types of data important to the company, in additional locations. Encompasses less-structured data such as IP. Full understanding of what data is on which machines or apps, its age, and risk. Implement a data store review process into all projects to identify data usage for new initiatives</td>
 <td>Interview business or functional groups to identify data important to the organization.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Apply universal discovery, i.e., discovery by default. This continuous automated approach enables discovery of data not previously defined or recognized as sensitive. It gives visibility to drive new proactive policies and decisions.</td>
 <td>Use tools to identify newly created databases and data repositories and automatically integrate them into a corporate data inventory. <br/><br/>Uses tools such as automated data tracing of all data without relying on staff or user tagging. New data stores are created via automation and tagged appropriately.</td>
 </tr>
@@ -114,24 +114,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
-<th><strong>Methods/Tools</strong></th>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/Tools</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Discover project-based data in known locations.</td>
 <td>Manual processes (surveys, discussions).</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Incorporate data found through expanded discovery, in unexpected locations (e.g., data sprawl).</td>
 <td>Automated discovery tools (e.g., DLP, shadow IT discovery).</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Discover all in-scope data in all locations.</td>
 <td>Implement data tracing to maintain visibility over data stored in 3rd party systems.</td>
 </tr>
@@ -142,24 +142,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
+<th>Levels</th>
+<th>Practices</th>
 <th><strong>Methods/Tools</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Classify project-based data in known locations using top-down, organizational classifications (e.g., Public, Internal, Classified). Point-in-time classification.</td>
 <td>Manual (tagging, keywords, AIP/MIP labels).</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Classify organizational in-scope data in all locations on a periodic basis.</td>
 <td>Automated classification tools based on content scanning either at rest or in transit.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Automatically classify all in-scope data in all locations by default. <br/><br/>Unclassified data is treated as a security event/alert, with root-cause analysis.</td>
 <td>Automated classification tools with provenance and enterprise context.</td>
 </tr>
@@ -177,17 +177,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Assess likely impact and probability of data exposure/alteration due to data sprawl, known vulnerabilities and the organization's own experience of threats. Verify compliance of cloud and SaaS vendors.</td>
 <td>Manual review of key data data sources and protection policies. May include interviews with internal teams and stakeholders to identify any previous incidents.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Perform periodic assessment of risk, based on understanding of the external threat landscape.</td>
 <td>Provide a regular review of recent industry data incidents and popular attacker tactics, techniques, and procedures (TTPs) based on news, industry bulletins, and security alerts. Evaluate existing policies and protection mechanisms in context of these risks.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Continuous assessment to gain a complete understanding of all dimensions of data risk for all in-scope data. <br/><br/>Address data risks posed by trusted insiders at SaaS vendors, partners, and other elements of the extended data supply chain. Audit partner data security policies and controls to verify that sensitive data is properly protected from insider and outsider risks.</td>
 <td>Risk and threat modeling and analysis tools. <br/><br/>Data Protection Agreements, audit controls, logs, reports, and policies related to the organization's data.</td>
 </tr>
@@ -231,24 +231,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
-<th><strong>Methods/Tools</strong></th>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/Tools</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Enforce ad-hoc policies using native application controls.</td>
 <td>Static access control lists based on user identities. Native application access and authorization.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Centralized access controls to establish consistent rules around what data can be accessed. Ensure ability to enforce fine-grained entitlements (e.g., all execs are allowed read-only access to company metrics spreadsheet but only the CFO can edit the sheet and see certain tabs.)</td>
 <td>Centralized user or role-based access. IAM and user provisioning tools.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Dynamic access controls that adapt based on context or risk. Ensure ability to enforce risk-based authorization at user level, based on context of access (e.g., challenge for token code and image recognition when user accesses highest-value data from unknown device.) <br/><br/>Provide access to data via applications built to prevent high-volume copying of data.</td>
 <td>Dynamic, contextual access controls providing access based on attributes such as: endpoint configuration, patch status and connection origin. <br/><br/>Fine-grained entitlements tools. <br/><br/>Step-up authentication tools. <br/><br/>Data owner approval workflows</td>
 </tr>
@@ -259,24 +259,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
+<th>Levels</th>
+<th>Practices</th>
 <th><strong>Methods/Tools</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Define clear data handling policies. Ensure violations of the policies are monitored for known sensitive data in known locations and any detected misuse is manually remediated by the security team. <br/><br/>Note: data handling policies may restrict locations for storing or channels for transmitting sensitive data, place restrictions on sharing the data inside or outside of the organization, or impose data retention requirements.</td>
 <td>Enterprise DLP, Platform DLP, CASB, Insider threat protection/detection — in monitor-only mode.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Ensure data handling policies are enforced (i.e., block user upload to personal file sharing app) for all known sensitive data in both known and unknown locations. To further reduce the potential for misuse, ensure that data is tokenized, masked, or encrypted.</td>
 <td>Level 1 tools run in enforcement mode, plus tokenization, masking, and encryption.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Enforce data handling policies for all data and all of its derivatives (e.g., data converted into other formats or cut/pasted or embedded in other documents) OR prevent the creation of derivatives. Enforce controls for data even after it leaves approved locations or goes outside the organization.</td>
 <td>Level 2 plus DRM and Data Detection and Response tools that provide continuous tracing of all data and derivatives.</td>
 </tr>
@@ -287,24 +287,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
+<th>Levels</th>
+<th>Practices</th>
 <th><strong>Methods/tools</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Train users on the established policies for protecting data including what types of data are particularly sensitive and what applications and features are approved for handling sensitive data. <br/><br/>Ensure that users acknowledge established policies and are tested to verify that they have adequately understood the training. <br/><br/>Enable users with self-approved one-time override of data blocking policies/controls to facilitate and align with necessary business functions/practices.</td>
 <td>Periodic education and training. Can be delivered in a classroom setting or self-paced remote training.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Implement incident-based training and reinforcement based on policy violations. Document violations and identify corrective actions to avoid future violations. Enable users with workflow-governed override of data blocking policies/controls to facilitate and align with necessary business functions/practices.</td>
 <td>Detection of policy violations. Manual follow-up by an end-user's supervisor. <br/><br/>DLP.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Incorporate automated real-time coaching and user training. This includes contextual coaching within the end user's regular workflow without the need for manager intervention. <br/><br/>Enable users to provide feedback and justification where policies/settings may need to be adjusted to better align with business goals/practices and/or fine-tune how the organization protects sensitive data.</td>
 <td>Real-time training platforms or data security platforms, ideally featuring adaptive response capabilities.</td>
 </tr>
@@ -325,17 +325,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Note: Driven by core regulatory requirements and basic best practices. <br/><br/><strong>Delete:</strong> Ensure that legal requirements for data retention and deletion have been identified. Enforce policies to ensure only the minimal amount of personal data is collected and stored in organizationally controlled locations. <br/><br/><strong>Retain:</strong> Build policies to properly archive and protect any regulated and sensitive data to avoid loss or inadvertent deletion.</td>
 <td>Data minimization and erasure, consent management tools. <br/><br/>Data protection policies, and manual data governance procedures.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Apply an automated and enterprise-wide approach to lifecycle management. Manage all copies of the data, not just in the central database. <br/><br/>Automatically enforce policies related to retention.</td>
 <td>Use of an enterprise document management solution to store and identify potentially outdated data and all copies.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Implement fully automated retention orchestration. Automatically enforce retention policies for all locations and for all in-scope data.</td>
 <td>Level 2 plus retention orchestration and automated erasure to standards. <br/><br/> Data has a lifecycle policy attached to it at creation, ensuring it CAN'T violate retention policies.</td>
 </tr>
@@ -377,17 +377,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Collect logs and alerts, including: <br/>- Content attribute matches (content) <br/>- User access logs (user) <br/>- Violation events</td>
 <td>Manual triage of logs and incident invocation <br/>(where applicable)</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Record data movement events and behaviors for priority enterprise applications (application and user actions). This could include recording user actions when using data in a cloud application or on a host device such as editing or renaming a file, copying/pasting data, uploading/downloading, etc. Record data lineage across user actions and behaviors to maintain context. <br/><br/>Incorporate risk and threat data from external sources to identify threat families and techniques targeting data. <br/><br/> Collect additional data that can be valuable for analytics and anomaly detection. This may include data not limited to security events (e.g. network logs, network flows, data access and application logs, etc).</td>
 <td>DRM, data lineage tools, DDR tools. <br/><br/>DLP <br/><br/>External threat feeds, risk sources. <br/><br/>Other logging tools.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Collect all user actions across all applications (including both unmanaged/personal and managed/corporate applications). <br/><br/>Record data lineage across multiple applications and locations (e.g., relate data copied/pasted from database to a presentation.)</td>
 <td>DDR tools.</td>
 </tr>
@@ -405,17 +405,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Implement signature- and rule-based detection models based on pattern matching (regular expression) or defined metadata or tags. <br/><br/>Use these techniques to detect the movement of sensitive data and to find previously undiscovered data in unsanctioned locations.</td>
 <td>IDS, DLP, File system auditing, CASB, SIEM/automated log review.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Implement data analytics and log correlation of multiple data sources including data from applications, users, and systems. <br/><br/>Leverage multiple data sources to baseline activity and identify event-based anomalous behavior (e.g., unusual download sizes). <br/><br/> Note that these practices provide limited coverage of evasion techniques (encryption, file format conversion, etc.) used. <br/><br/>Use of &quot;honey&quot; data, which are fake data entries that are never to be used, to detect malicious or accidentally policy violating data movement.</td>
 <td>NDR, UBA, SIEM, SOAR, data tracing, honey data.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Perform advanced analysis based on full enterprise lineage of data including data provenance, all application and user behaviors. <br/><br/>Apply AI models to identify potentially malicious actions based on multiple dimensions of user behaviors.</td>
 <td>AI/ML/deep learning, graph analysis</td>
 </tr>
@@ -439,24 +439,24 @@
 <table>
 <thead>
 <tr>
-<th><strong>Levels</strong></th>
-<th><strong>Practices</strong></th>
-<th><strong>Methods/tools</strong></th>
+<th>Levels</th>
+<th>Practices</th>
+<th>Methods/tools</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Incidents are reported manually by customers, employees, service providers, or others. <br/><br/>Incident response plans include specific steps for identifying the data impacted and tailoring response and reporting requirements. <br/><br/>Incident responders have access to a mapping of data source to data owner and owners are trained on their responsibilities during an incident. <br/><br/>Mitigate by blocking access or otherwise stopping unwanted activity; primarily manually initiated.</td>
 <td>Log management tools, SIEM. <br/><br/>Manual efforts for validating scope and assessing impact. <br/><br/>Ability to manually suspend/revoke access to network and individual systems.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Incidents are reported manually, but may also be detected automatically by rules-, signature-, or behavior-based tools. <br/><br/>Automated correlation tools enrich data to help analysts quickly identify impacted systems, users, and data. <br/><br/>Automate user/device-centric mitigation and containment, such as: <br/><br/>- Blocking access to data <br/>- Blocking access to external <br/>- Fully isolating/disabling offending user/device <br/><br/>Ensure collection and preservation of forensic data.</td>
 <td>UEBA, XDR, event correlation. <br/><br/>Ability to effectively isolate systems.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Execute fully automated IR narrative (i.e., push-button ability to view all details related to scope and impact, along with responses already taken and recommended). <br/><br/>Implement orchestrated/automated mitigation responses including user suspension, system quarantine, and leaked data sanitization.</td>
 <td>SOAR, Open-XDR, automated incident response tools, DDR.</td>
 </tr>
@@ -474,17 +474,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Implement a single, reactive communication plan that is activated during incident response and details participants/members, roles, legal/compliance requirements, communication mechanisms, and timeframes.<br/><br/>Applies to internal stakeholders (including legal team), affected external parties, law enforcement agencies, and regulatory authorities.<br/><br/>Coordinate and communicate response and recovery activities among key stakeholders and affected/essential business partners.<br/><br/>Perform incident/breach notifications and updates within prescribed time frames for applicable jurisdictions (i.e., regulatory driven) and contractual agreements (i.e., business driven). <br/><br/>Engage and cooperate with relevant authorities on investigative, forensic preservation, and disclosure processes.<br/><br/>Manage related public relations activities.</td>
 <td>Mostly manual.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Implement multiple communication plans (or modules) by type/class of incident. <br/><br/>Includes proactive, voluntary information-sharing with key business partners, extended supply chain, unaffected customers/constituents (when deemed appropriate), and infosec community at large to enable greater, collective situational awareness.<br/><br/>Reputation is proactively repaired after an incident.</td>
 <td>Extensive automation of notification plans and processes. <br/><br/>Intelligence sharing portal/platform (i.e., reverse feed).</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td><strong>Reserved for future development.</strong></td>
 <td></td>
 </tr>
@@ -516,17 +516,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Define sanctioned backup tools and locations. <br/><br/>Ensure backups of in-scope data are conducted, maintained, and tested.<br/><br/>Ensure retention of multiple versions of data. <br/><br/>Restore from backup as needed (i.e., in response to an incident that impacts data integrity or availability). <br/><br/>Ensure isolation at off-site, offline storage locations.</td>
 <td>Backup and recovery tools.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Prevent backups to non-approved locations or applications (e.g., employee's personal backup). <br/><br/>Control backups on a per-file and per-account basis (e.g., prevent users from backing up data to personal Dropbox instead of corporate location).<br/><br/>Ensure backups are encrypted, and that encryption keys are stored in a redundant, non-deletable way, with strict access control.<br/><br/>Ensure and verify retention of data in cloud/SaaS applications.<br/><br/>Ensure compliance and ability to delete the data in cloud and SaaS backups based on user request or regulatory requirement.<br/><br/>Establish back-up policies based on specific use cases (e.g. data relevant to a legal case may require raw data to be preserved for an extended period of time).<br/><br/>Back-ups of IaaS environments is done towards separate IaaS accounts, using system accounts that have write-only privileges, to prevent even a compromised administrator account from deleting the data and backups at once.</td>
 <td>Backup and recovery tools.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td><strong>Reserved for future development</strong></td>
 <td></td>
 </tr>
@@ -544,17 +544,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Perform incident-specific review &amp; adjustments for high- and medium-severity incidents. <br/><br/>Adjust/fix policies, practices, and configuration settings of technical countermeasures to prevent occurrence of similar incidents going forward.</td>
 <td>Primarily a manual exercise. <br/><br/>SIEM.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Extend incident-specific review and adjustments to cover all severity levels. <br/><br/>Perform root-cause analysis for high/medium severity incidents to uncover and fix upstream issues that caused the associated data to be at risk in the first place (e.g., role sprawl; insufficiently granular roles or policies; etc.)</td>
 <td>Technology-based facilitation of appropriate adjustments/fixes (e.g., system proposes changes, but operator reviews and manually implements). May include SIEM, SOAR, DDR, and NDR tools, or other security or network management tools.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Extend scope for root cause analysis to cover all severity levels. <br/><br/>Ensure adjustments/fixes are applicable enterprise-wide and are inclusive of all incidents of similar type/class, other root causes, and across other apps/systems. Example: after analyzing a data violation from a user sending data over personal GMail, the company may enforce policies to distinguish personal vs corporate GMail and also apply those lessons to other applications such as Dropbox. <br/><br/>Reassess implementation of security model and adjust controls and target levels as needed.</td>
 <td>SIEM, SOAR. Orchestration / automation of appropriate adjustments/fixes.</td>
 </tr>
@@ -572,22 +572,41 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>L1</td>
 <td>Maintain constant communication with all key functions of the organization and adapt data security objectives to evolving business goals. <br/><br/>Monitor and account for ongoing changes to the threat landscape, e.g., by leveraging advanced threat intelligence sources providing insights into the evolution of threats, threat actors, and their tactics, techniques, and procedures (TTPs).<br/><br/>Achieve/maintain relevant certifications for internal security team/practitioners, e.g., ISC2 CISSP, ISACA CISM/CISA, CompTIA CySA+, EC-council Certified Ethical Hacker (CEH).</td>
 <td>Quarterly data security/privacy reviews with line-of-business leaders. <br/><br/>Customized threat intelligence feeds.</td>
 </tr>
 <tr>
-<td>2</td>
+<td>L2</td>
 <td>Monitor and account for the emergence of new security technologies and innovations. <br/><br/>Share (/obtain) information on threats, practices, and lessons learned with (/from) industry peers and associations.</td>
 <td>Primarily manual. <br/><br/>Threat intelligence platform; ISAC participation; Automated Indicator Sharing.</td>
 </tr>
 <tr>
-<td>3</td>
+<td>L3</td>
 <td>Investigate, adapt, and adopt concepts and technologies from other markets (e.g., graph analytics).</td>
 <td>Primarily manual.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="about-the-c3-working-group" tabindex="-1"><a class="header-anchor" href="#about-the-c3-working-group" aria-hidden="true">#</a> About the C3 Working Group</h2>
+<p>The Comprehensive Cyber Capabilities Working Group (C3WG) is working to define for the cybersecurity community a comprehensive list of capabilities needed to secure and defend the full range of cyber assets within an organization. Comprised of security leaders from across industries, the group has deep expertise in the people, process, and technology used to solve security challenges.</p>
+<h3 id="chair" tabindex="-1"><a class="header-anchor" href="#chair" aria-hidden="true">#</a> Chair</h3>
+<p><a href="https://www.linkedin.com/in/sounil/" target="_blank" rel="noopener noreferrer">Sounil Yu, CISO, JupiterOne<ExternalLinkIcon/></a></p>
+<h3 id="members" tabindex="-1"><a class="header-anchor" href="#members" aria-hidden="true">#</a> Members</h3>
+<ul>
+<li><a href="https://www.linkedin.com/in/aastanley/" target="_blank" rel="noopener noreferrer">Aaron Stanley, VP of Security, dbt Labs<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/arkadiyg/" target="_blank" rel="noopener noreferrer">Arkadiy Goykhberg, CISO, Branch<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/brian-m-982825165/" target="_blank" rel="noopener noreferrer">Brian Markham, CISO, EAB<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/christopherjhodson/" target="_blank" rel="noopener noreferrer">Chris Hodson, CSO, Cyberhaven<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/danwalshciso/" target="_blank" rel="noopener noreferrer">Dan Walsh, CISO, VillageMD<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/guillaumeross/" target="_blank" rel="noopener noreferrer">Guillaume Ross, Deputy CISO, JupiterOne<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/sully1811/" target="_blank" rel="noopener noreferrer">John Sullivan, CSO, Boston Scientific<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/kevin-paige-578547a/" target="_blank" rel="noopener noreferrer">Kevin Paige, CISO, Flexport<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/louis-holt/" target="_blank" rel="noopener noreferrer">Louis Holt, CEO, ESPROFILER<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/merike-kaeo-52910a/" target="_blank" rel="noopener noreferrer">Merike Kaeo, former CISO, Uniphore<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/richardrushing/" target="_blank" rel="noopener noreferrer">Richard Rushing, CISO, Motorola Mobility<ExternalLinkIcon/></a></li>
+<li><a href="https://www.linkedin.com/in/mrrossyoung/" target="_blank" rel="noopener noreferrer">Ross Young, CISO, Caterpillar Financial<ExternalLinkIcon/></a></li>
+</ul>
 <h2 id="appendix" tabindex="-1"><a class="header-anchor" href="#appendix" aria-hidden="true">#</a> Appendix</h2>
 <h3 id="getting-started-with-dsmm" tabindex="-1"><a class="header-anchor" href="#getting-started-with-dsmm" aria-hidden="true">#</a> Getting Started with DSMM</h3>
 <p>The Data Security Maturity Model helps organizations protect their data and critical assets by developing a data-centric approach to security, ensuring that risk context and policy enforcement follow the data no matter how it moves or is modified. This ability to protect any type of data across devices, applications, and cloud assets is essential if organizations are to take advantage of the power of modern collaboration and digital transformations without exposing their data to external threats, insider threats, or simple mistakes.</p>

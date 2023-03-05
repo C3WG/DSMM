@@ -23,6 +23,3 @@ Markdown documents can be found in the following folder:
 
     yarn
     npm run docs:build
-
-
-TODO: Implement correct GitHub pages build (needs changing for yarn)
