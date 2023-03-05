@@ -206,6 +206,28 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "About the C3 Working Group",
+        "slug": "about-the-c3-working-group",
+        "link": "#about-the-c3-working-group",
+        "children": [
+          {
+            "level": 3,
+            "title": "Chair",
+            "slug": "chair",
+            "link": "#chair",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Members",
+            "slug": "members",
+            "link": "#members",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "Appendix",
         "slug": "appendix",
         "link": "#appendix",
@@ -275,16 +297,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

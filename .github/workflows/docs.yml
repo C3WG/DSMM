@@ -26,19 +26,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Enable Yarn 2
-      - name: Enable corepack
-        run: corepack enable
-      - name: Enable yarn 2
-        run: yarn set version stable
+#      # Enable Yarn 2
+#      - name: Enable corepack
+#        run: corepack enable
+#      - name: Enable yarn 2
+#        run: yarn set version stable
 
       # Install Dependencies
       - name: Install Dependencies
-        run: yarn
+        run: yarn install
 
       # run build script
       - name: Build Document site
-        run: yarn build
+        run: yarn docs:build
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages

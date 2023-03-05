@@ -18,11 +18,11 @@ Organizations also have access to new types of data security and privacy tools t
 
 The DSMM is organized into five key Functions of a data security program. These Functions are:
 
-- **Identify and Classify**
-- **Protect**
-- **Detect**
-- **Respond**
-- **Recover and Improve**
+- **[Identify and Classify](#identify-and-classify)**
+- **[Protect](#protect)**
+- **[Detect](#detect)**
+- **[Respond](#respond)**
+- **[Recover and Improve](#recover-and-improve)**
 
 ![DSMM Legend](/images/dsmm-legend.svg)
 

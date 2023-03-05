@@ -9,11 +9,11 @@
 <h2 id="how-to-navigate-the-model" tabindex="-1"><a class="header-anchor" href="#how-to-navigate-the-model" aria-hidden="true">#</a> How to Navigate the Model</h2>
 <p>The DSMM is organized into five key Functions of a data security program. These Functions are:</p>
 <ul>
-<li><strong>Identify and Classify</strong></li>
-<li><strong>Protect</strong></li>
-<li><strong>Detect</strong></li>
-<li><strong>Respond</strong></li>
-<li><strong>Recover and Improve</strong></li>
+<li><strong><a href="#identify-and-classify">Identify and Classify</a></strong></li>
+<li><strong><a href="#protect">Protect</a></strong></li>
+<li><strong><a href="#detect">Detect</a></strong></li>
+<li><strong><a href="#respond">Respond</a></strong></li>
+<li><strong><a href="#recover-and-improve">Recover and Improve</a></strong></li>
 </ul>
 <p><img src="/images/dsmm-legend.svg" alt="DSMM Legend"></p>
 <p>Each <strong>Function</strong> covers multiple underlying <strong>Objectives</strong>. Objectives focus on a particular aspect of security that supports the higher level Function. For example, &quot;Data Discovery&quot; is an Objective within the Identify and Classify Function. Each Objective is addressed at up to three <strong>Levels</strong> of maturity. Each Level includes Practices/Activities that are needed in order to meet the given Level of maturity and include example methods and tools that can be used to implement and fulfill those Practices. These example methods and tools are not intended to be exhaustive, but rather to provide some basic references and guidance for users of the model. Organizations are encouraged to investigate and identify the methods, tools, and processes that make the most sense for their unique needs.</p>

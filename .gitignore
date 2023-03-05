@@ -19,10 +19,10 @@ node_modules/*
 .editorconfig
 
 # Vuepress Temp / Cache
-.temp
-.temp/*
-.cache
-.cache/*
+/docs/.vuepress/.temp/
+/docs/.vuepress/.temp/*
+/docs/.vuepress/.cache/
+/docs/.vuepress/.cache/*
 
 # Docs dist directory
 /vuepress
