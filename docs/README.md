@@ -4,7 +4,7 @@
 
 ## Scope and Purpose
 
-The Data Security Maturity Model (DSMM) helps organizations protect their data and critical assets by developing a data-centric approach to security. Overall, the DSMM shares a similar structure with some of the most well-known security frameworks in the industry, most notably the NIST Cybersecurity Framework. This will hopefully allow organizations to integrate it more easily into their existing security and privacy efforts and augment their investment in other frameworks.
+The Data Security Maturity Model (DSMM) helps organizations protect their sensitive information by developing a data-centric approach to security. Overall, the DSMM shares a similar structure with some of the most well-known security frameworks in the industry, most notably the NIST Cybersecurity Framework. This will hopefully allow organizations to integrate it more easily into their existing security and privacy efforts and augment their investment in other frameworks.
 
 ## Why use DSMM
 
