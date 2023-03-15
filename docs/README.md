@@ -400,3 +400,122 @@ In this case the firm must protect a wide range of datatypes in which many users
 - **Detect -** Level 3
 - **Respond -** Level 2
 - **Recover and Improve -** Level 2
+
+## Security Patterns
+
+The DSMM looks at data on its own, as an asset, instead of simply as data residing on infrastructure.
+
+To be able to protect data adequately and meet the various recommendations in this model, certain security patterns can help, by leveraging the [D.I.E triad](https://www.fastly.com/blog/the-dept-of-know-live-sounil-yu-on-why-embracing-the-die-security-model-means-faster-innovation).
+
+
+
+### Managed data stores
+Favor managed data stores.
+
+The shared responsibility model allows customers to focus on securing the data itself, without worrying about the infrastructure.
+
+Managed data stores are also, by definition, easy to inventory and backup.
+
+This can help you achieve practices in multiple areas, from _Data Location Discovery and Context_ to _Controlling Access_, _Recover and Improve_ and more.
+
+This section of the DSMM is not an exhaustive list of security patterns that can help you increase data security maturity but rather an example of practices possible in modern environments where a high level of security can be achieved without requiring large amounts of manual operations and processes. 
+
+This is based on the [D.I.E. triad](https://www.youtube.com/watch?v=_omGtDfaAjI).
+
+#### Managed data stores
+
+Favor managed data stores, which are much easier to manage via APIs. 
+
+Managed data stores have multiple advantages:
+
+1. The shared responsibility model allows the customer to focus on securing the data itself, instead of infrastructure.
+2. Cloud IAM can be used to control access to them, leveraging security processes and technology around cloud identities.
+3. Backups are managed, and recovery is typically relatively easy and fast.
+4. Most types of managed data stores offer interesting redundancy options, locally and globally.
+
+This allows you to have data stores that are **distributed**, via redundancy options, with a configuration that is **immutable** or at least very easy to track, and if the data itself is backed up frequently and easy to restore, you could consider the database itself **ephemeral** and even automate its destruction and recovery, to ensure it is always as easy and rapid as required.
+
+#### Cryptography
+
+In the pet versus cattle equation, the data itself is oven a pet. As we typically do not want to make all data ephemeral, at least, below its usefulness window, it has to be protected with additional layers. For data that is of little value over any period of time or for which confidentiality is not important, these steps are overkill, and you should focus on ensuring data is removed rapidly.
+
+Cryptography in most cloud service providers is available in many forms. 
+
+1. Encrypt managed data stores at rest. While this will not improve security much for running databases, it usually means backups and snapshots will be encrypted, and it certainly makes some audit questions easier to answer.
+2. Select specific data that is worth encrypting, anonymizing or hashing at the column level, then, use managed tools by the cloud service provider to do so.
+3. Leverage managed key management services, using customer keys where appropriate. For critical data, consider using cloud hardware security modules.
+4. Ensure only the appropriate services have access to the keys.
+
+For example, imagine a scenario where you must store social security numbers (SSNs) to report them to the government once a year, or to identify duplicate customer accounts. You could:
+
+1. Encrypt the SSN, using a combination of symmetric and asymmetric encryption, ensuring that the web service capturing the SSN only has write access and the ability to use a public key.
+2. Create a service that is able to read the SSNs, has no access to the Internet, and is only able to return a _match_ or _no-match_ result when provided a SSN to compare against.
+3. Create a third service that is able to read the SSNs and has no access to the Internet except for the destination they need to be sent for government processing, where they should be sent in an encrypted manner.
+
+By leveraging cryptography for what matters the most, you turn pets (valuable, clear-text data) into something closer to cattle (encrypted data, not valuable without the keys to it).
+
+#### Automation
+
+Automation is a key enabler of data security. By cutting out human access, we reduce the chances of mistakes, malicious activities using stolen credentials, malicious insiders, and we increase ephemerality and immutability of systems.
+
+Infrastructure-as-code located in source control can easily be reviewed by multiple team members, providing you with an audit trail of all changes as well as who requested and approved them.
+
+You can achieve many practices of the DSMM at a high level of maturity by:
+
+1. Using CI/CD pipelines to configure managed data stores, from automation systems, with accounts that are not known or accessible to humans.
+2. Using CI/CD pipelines to handle data structure migrations and upgrades.
+3. Requiring the use of CI/CD pipelines to perform manual actions on data, such as using a gitops flow to run queries and manually fix issues during emergencies.
+
+Imagine an environment where all of your data stores are configured via [Terraform](https://www.terraform.io/), [CloudFormation](https://aws.amazon.com/cloudformation/) or similar tools, where no human has access to their configuration[^1]. The data stores can use a standardized configuration, which will not drift due to manual, untracked troubleshooting. 
+
+Access to the data itself should also be governed via a similar process, for example, when data structure needs to be updated.
+
+This results in a system where cloud administrators do not have direct access to the data. By ensuring direct access to the data is not possible except via automation and cutting out a large swatch of attack classes, you also reduce the need for technologies such as DLP, and the need to secure endpoints is reduced as well.
+
+
+[^1]: Having monitored "break-glass" access accounts with physically secured 2FA methods is a good practice, to avoid being locked out while preventing casual use.
+
+#### Backups
+
+Any data that is considered a pet needs to be easily available and recoverable. Data that is not a pet and can be recreated easily, or is of low value, should not be backed up, as doing so would generate cost, and in some cases increase attack surface for no benefit.
+
+For data that must be conserved over time:
+
+1. Back up using tools native to the managed data store, frequently.
+2. Ensure backups are stored in a destination that can not be deleted, even with an administrative account.
+3. Monitor and alert on backup job completion.
+4. Automate restoration and testing of backups in separate data stores. 
+
+Imagine the following back up environment.
+
+You have a data store containing critical data about the state of stock in a warehouse. Losing it would completely halt the business for weeks, as it would be impossible to pick and ship orders until it can be manually rebuilt. This data is not particularly sensitive, though a competitor could use it to understand what products are good sellers as well as how much stock is kept of every item, so it is something you'd rather keep private.
+
+This data would be considered a _pet_, and not cattle.
+
+It is hosted in a managed relational database instance on a cloud provider. It is running on multiple instances in an availability zone, replicated to 2 other availability zones in the same region. It is backed up daily, to a storage bucket in another cloud account, using an IAM account which only has write access to it. On top of daily backups, point in time transaction logs are stored in another bucket, more local to the data store.
+
+The backups taken in the remote bucket are tested for recovery weekly, using automation that restores it, runs queries on both the live database and the backed up one, and confirms that entries that were created just before the backup was done are present. It also measures how long it took to recovery the database.
+
+As you track that metric, you realize that recovery has become very long, due to the size of the database. Thanks to this automation, you decide to replicate the database to other geographic regions, increasing cost, but reducing the odds of needing to fully recovery it. You take regular snapshots in the remote region, to be able to go back to a snapshot easily if a software bug corrupt the data.
+
+A ransomware threat group takes control of your cloud environment, steals your root account, and deletes databases. Unfortunately for them, they can't do anything to destroy the backups, and so you are back online rapidly after recovering the database in a clean environment.
+
+#### Infrastructure
+
+By using microservices, access control to datastores can be made granular to every service.
+
+1. Use microservices in the environment that is the most managed you can technically use. Favor cloud functions over containers, containers over temporary VMs, and temporary VMs over long-lived server VMs.
+2. Leverage service mesh features of managed environments to enforce policy that protects data in transit, such as by enforcing mutual TLS authentication and encryption between all services and data stores.
+3. Instead of using traditional DLP tools to intercept data being exfiltrated, monitor cloud logs for exfiltration and use the service mesh to control egress to the Internet. By only allowing the data to be exfiltrated within the cloud environment, such activity will be much easier to detect.
+
+#### Temporary and Limited Access
+
+Support staff often require read access to data, including customer data. 
+
+1. Ensure data is only accessible via applications meant to do so, using a combination of access controls and encryption.
+2. Favor models where the owner of the data approves its use for support purposes.
+3. Allow direct access to data for troubleshooting purposes only via fully monitored sessions, on systems without full Internet access.
+
+When you call your bank, they're usually able to pull up your records instantly. Why?
+
+In a world where data security is a priority, such types of access should be temporary and require your approval. A bank support employee could instead request access, which you'd approve via a push notification to their application. The employee would receive a token allowing them to view your data for 60 minutes. Such a measure would go a long way towards preventing massive theft of data by malicious insiders or stolen accounts of employees, while also providing a provable audit trail of who read what customer information.
