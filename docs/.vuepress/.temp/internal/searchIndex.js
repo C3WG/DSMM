@@ -74,9 +74,9 @@ export const searchIndex = [
           },
           {
             "level": 3,
-            "title": "Data Location Discovery and Context",
-            "slug": "data-location-discovery-and-context",
-            "link": "#data-location-discovery-and-context",
+            "title": "Data Flows and Context",
+            "slug": "data-flows-and-context",
+            "link": "#data-flows-and-context",
             "children": []
           },
           {
@@ -283,6 +283,21 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "Security Patterns",
+        "slug": "security-patterns",
+        "link": "#security-patterns",
+        "children": [
+          {
+            "level": 3,
+            "title": "Managed data stores",
+            "slug": "managed-data-stores",
+            "link": "#managed-data-stores",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/",
@@ -297,3 +312,16 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

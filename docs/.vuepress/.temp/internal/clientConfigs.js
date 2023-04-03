@@ -6,7 +6,6 @@ import clientConfig4 from 'C:/Development/Other/DSMM/node_modules/@vuepress/plug
 import clientConfig5 from 'C:/Development/Other/DSMM/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import clientConfig6 from 'C:/Development/Other/DSMM/node_modules/@vuepress/theme-default/lib/client/config.js'
 import clientConfig7 from 'C:/Development/Other/DSMM/node_modules/@vuepress/plugin-search/lib/client/config.js'
-import clientConfig8 from 'C:/Development/Other/DSMM/node_modules/@vuepress/plugin-pwa/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -17,5 +16,4 @@ export const clientConfigs = [
   clientConfig5,
   clientConfig6,
   clientConfig7,
-  clientConfig8,
 ]

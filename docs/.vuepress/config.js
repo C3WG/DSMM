@@ -2,12 +2,17 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 
 export default defineUserConfig({
   lang: 'en-US',
   title: 'Version 1.0',
   description: 'The first security framework focused on data. We\'re working to define what capabilities are needed to secure data in our world today.',
-  head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#1bade4' }],
+    ['link', { rel: 'icon', href: '/images/favicon.png' }]
+  ],
   theme: defaultTheme({
     // default theme config
     logo: '/images/dsmm-logo.svg',
@@ -33,6 +38,9 @@ export default defineUserConfig({
       // options
     }),
     pwaPlugin({
+      // options
+    }),
+    pwaPopupPlugin({
       // options
     }),
   ],
