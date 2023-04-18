@@ -106,6 +106,8 @@ The following set of questions can help leaders take a more comprehensive approa
 
 - Is there a consistent approach for discovering/tracking sensitive data across data stores, user devices, applications, and cloud? Can the organization confirm if sensitive data was deleted on a user's device or is sitting in the recycle bin?
 
+- How does the organization identify data owners?  Once identified, do data owners understand their reposibilities for classification, business impact analysis, and risk management?
+
 - How will the organization automatically classify sensitive data that may not conform to rules and signatures (e.g., non-patterned, non-textual, or other complex types of data)?
 
 - To what extent should ongoing classification efforts be manual or automated? Will staff or end-users be required to perform classification functions?
