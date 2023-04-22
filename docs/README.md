@@ -24,7 +24,7 @@ The DSMM is organized into five key Functions of a data security program. These 
 - **[Respond](#drs-respond)**
 - **[Recover and Improve](#drc-recover-and-improve)**
 
-![DSMM Legend](images/dsmm-legend.svg)
+![DSMM Legend](/images/dsmm-legend.svg)
 
 Each **Function** covers multiple underlying **Objectives**. Objectives focus on a particular aspect of security that supports the higher level **Function**. For example, _Data Discovery_ is an **Objective** within the **Identify** and **Classify** **Functions**. Each **Objective** is addressed at up to three **Levels** of maturity. Each level includes practices/activities that are needed in order to meet the given level of maturity and include example methods and tools that can be used to implement and fulfill those practices. These example methods and tools are not intended to be exhaustive, but rather to provide some basic references and guidance for users of the model. Organizations are encouraged to investigate and identify the methods, tools, and processes that make the most sense for their unique needs.
 
