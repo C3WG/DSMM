@@ -2,7 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
-import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
+// import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -38,9 +38,6 @@ export default defineUserConfig({
       // options
     }),
     pwaPlugin({
-      // options
-    }),
-    pwaPopupPlugin({
       // options
     }),
   ],
