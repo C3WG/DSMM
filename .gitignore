@@ -27,3 +27,4 @@ node_modules/*
 # Docs dist directory
 /vuepress
 .DS_Store
+dist

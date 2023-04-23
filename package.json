@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@vuepress/plugin-pwa": "next",
-    "@vuepress/plugin-pwa-popup": "^2.0.0-alpha.8",
     "@vuepress/plugin-search": "next"
   }
 }
