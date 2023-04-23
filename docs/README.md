@@ -49,7 +49,7 @@ provide a high-level, lifecycle-oriented view of an organization's management of
 
 Are the most fundamental component of the DSMM. Each Practice is a brief statement describing a data security/privacy activity to be performed by an organization. The purpose of these activities is to achieve and sustain an appropriate level of security/privacy, commensurate with an organization's tolerance for risk and its overarching business objectives. Within each Objective, Practices are organized to progress along a maturity scale.
 
-## Referencing DSM
+## Referencing DSMM
 
 DSMM can be seamlessly integrated with external tools and reporting systems using a standardized referencing system. Each objective within the model possesses a unique identifier to facilitate this integration process. The identifiers adhere to a specific format, and maturity levels can be represented through a simple dot notation.
 
@@ -96,7 +96,7 @@ The following set of questions can help leaders take a more comprehensive approa
 
 - What data contains the organization's intellectual property or trade secrets? This may include direct forms of IP such as source code or design files, as well as more indirect sources such as emails, documents, and presentations for product plans, etc.
 
-- What data would cause damage to the organization (financial, competitive, reputational, etc) if it were lost or exposed to the public?
+- What data would cause damage to the organization (financial, competitive, reputational, etc.) if it were lost or exposed to the public?
 
 - What data would be more valuable to an attacker than to the organization?
 
@@ -161,7 +161,7 @@ The goal of this Objective is to identify areas of risk, and assess how much dam
 
 This Function entails implementing policies and practices to proactively minimize the exposure of important/sensitive data, in particular by controlling how it is accessed, used, and retained. This is a critical Function of the model as it covers the policies and procedures aimed at preventing data-related security events.
 
-The Objectives within Protect will often build on the previous work done in Identify and Classify. While Identify and Classify is designed to help map out an organization's data risk, Protect focuses on mitigating that risk. Most organizations will have multiple types of sensitive data, and the appropriate level of protection can naturally vary based on the type of data or business use case, as guided by the Data Risk Assessment Objective. In fact, a single piece of content may contain multiple types or classifications of sensitive data (e.g PII and PHI), and the organization may need to consider which protection rules should take precedence when protecting data. Ultimately, the Protect function will require organizations to directly consider their tolerance for risk as well as how security controls could potentially impact productivity.
+The Objectives within Protect will often build on the previous work done in Identify and Classify. While Identify and Classify is designed to help map out an organization's data risk, Protect focuses on mitigating that risk. Most organizations will have multiple types of sensitive data, and the appropriate level of protection can naturally vary based on the type of data or business use case, as guided by the Data Risk Assessment Objective. In fact, a single piece of content may contain multiple types or classifications of sensitive data (e.g. PII and PHI), and the organization may need to consider which protection rules should take precedence when protecting data. Ultimately, the Protect function will require organizations to directly consider their tolerance for risk as well as how security controls could potentially impact productivity.
 
 **Some key considerations may include:**
 
@@ -171,7 +171,7 @@ The Objectives within Protect will often build on the previous work done in Iden
 
 - How will organizations monitor and control common enterprise data flows (e.g. user to removable media, user to personal cloud, social media, backend SaaS integrations, and other cloud-to-cloud)?
 
-- How will derivatives of data be tracked and protected (e.g,. an encrypted version of a sensitive document, a presentation that embeds a table from a sensitive spreadsheet, an email that contains copied/pasted content from a sensitive internal application, etc)?
+- How will derivatives of data be tracked and protected (e.g. an encrypted version of a sensitive document, a presentation that embeds a table from a sensitive spreadsheet, an email that contains copied/pasted content from a sensitive internal application, etc)?
 
 - How will the organization address the risk of a user's device or credentials being compromised?
 
@@ -214,7 +214,7 @@ This Objective focuses on end-user training, coaching, and interaction to reduce
 > **User education** <br/>Traditional user education is broad-based and generally takes place only periodically – during onboarding, or a few times a year – and covers corporate security policies, anti-phishing, anti-malware, and other diverse categories. However, data exposure through accidental user events are a common cause of security incidents. Studies have proven that one of the most effective ways to change unwanted user behavior is via just-in-time, contextual training, which alerts users in real time when they are engaging in potentially risky behavior. This "adaptive response" allows users to interact, give feedback and learn about the proper data handling requirements. In turn, this can bring down the risk of unwanted data exposure by a factor of twenty.
 
 ### DPR004: Data Retention 
-The goal of this Objective is to reduce the risk of unwanted exposure, by proactively eliminating in-scope data that is no longer needed or out of date, or which data owners have requested be erased/removed from the organization's records. On the other hand, many regulations require records to be retained for defined periods of time (e.g., PCI-DSS, HIPAA, Fair Labor laws, etc). Data retention must balance the need to ensure unnecessary data is not retained while preventing other types of data from being inadvertently deleted.
+The goal of this Objective is to reduce the risk of unwanted exposure, by proactively eliminating in-scope data that is no longer needed or out of date, or which data owners have requested be erased/removed from the organization's records. On the other hand, many regulations require records to be retained for defined periods of time (e.g., PCI-DSS, HIPAA, Fair Labor laws, etc.). Data retention must balance the need to ensure unnecessary data is not retained while preventing other types of data from being inadvertently deleted.
 
 | **Levels** | **Practices**                                                                                                                                                                                                                                                                                                                                                                                                                                                        | **Methods/Tools**                                                                                                                                                                         |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -383,7 +383,7 @@ While the DSMM provides the details of each Function, this Appendix provides a g
 
 Every organization is unique both in terms of data real estate and tolerance for risk. The Data Security Maturity Model is designed to adapt to the needs of each organization. The appropriate maturity level for each objective will vary based on each organization's unique risk profile.
 
-However, many data security programs have long been constrained by the limitations of old-school security tools – often limiting data security to narrowly defined DLP and regulatory use cases. Recent innovations in data security technologies enable organizations to apply data security controls far more universally than ever before, including the ability to protect any data, in any location, and at any time. As such, it is important - from both a security and a business point of view - to take a fresh look at the organization through the lens of its data. This means evaluating all of the organization's data assets in terms of the impact of that data being lost, exposed, or otherwise misused or rendered unavailable. As a result, organizations may want to take the following steps:
+However, many data security programs have long been constrained by the limitations of old-school security tools – often limiting data security to narrowly defined DLP and regulatory use cases. Recent innovations in data security technologies enable organizations to apply data security controls far more universally than ever before, including the ability to protect any data, in any location, and at any time. As such, it is important - from both a security and a business point of view - to take a fresh look at the organization through the lens of its data. This means evaluating all the organization's data assets in terms of the impact of that data being lost, exposed, or otherwise misused or rendered unavailable. As a result, organizations may want to take the following steps:
 
 - Collaborate with all business units to identify the data critical to each group or operational function.
 - Identify all intellectual property and trade secrets regardless of data or file type.
@@ -443,7 +443,8 @@ To be able to protect data adequately and meet the various recommendations in th
 
 
 ### Managed data stores
-Favor managed data stores.
+
+Favor managed data stores, which are much easier to manage via APIs.
 
 The shared responsibility model allows customers to focus on securing the data itself, without worrying about the infrastructure.
 
@@ -455,10 +456,6 @@ This section of the DSMM is not an exhaustive list of security patterns that can
 
 This is based on the [D.I.E. triad](https://www.youtube.com/watch?v=_omGtDfaAjI).
 
-#### Managed data stores
-
-Favor managed data stores, which are much easier to manage via APIs. 
-
 Managed data stores have multiple advantages:
 
 1. The shared responsibility model allows the customer to focus on securing the data itself, instead of infrastructure.
@@ -468,7 +465,7 @@ Managed data stores have multiple advantages:
 
 This allows you to have data stores that are **distributed**, via redundancy options, with a configuration that is **immutable** or at least very easy to track, and if the data itself is backed up frequently and easy to restore, you could consider the database itself **ephemeral** and even automate its destruction and recovery, to ensure it is always as easy and rapid as required.
 
-#### Cryptography
+### Cryptography
 
 In the pet versus cattle equation, the data itself is oven a pet. As we typically do not want to make all data ephemeral, at least, below its usefulness window, it has to be protected with additional layers. For data that is of little value over any period of time or for which confidentiality is not important, these steps are overkill, and you should focus on ensuring data is removed rapidly.
 
@@ -487,7 +484,7 @@ For example, imagine a scenario where you must store social security numbers (SS
 
 By leveraging cryptography for what matters the most, you turn pets (valuable, clear-text data) into something closer to cattle (encrypted data, not valuable without the keys to it).
 
-#### Automation
+### Automation
 
 Automation is a key enabler of data security. By cutting out human access, we reduce the chances of mistakes, malicious activities using stolen credentials, malicious insiders, and we increase ephemerality and immutability of systems.
 
@@ -508,7 +505,7 @@ This results in a system where cloud administrators do not have direct access to
 
 [^1]: Having monitored "break-glass" access accounts with physically secured 2FA methods is a good practice, to avoid being locked out while preventing casual use.
 
-#### Backups
+### Backups
 
 Any data that is considered a pet needs to be easily available and recoverable. Data that is not a pet and can be recreated easily, or is of low value, should not be backed up, as doing so would generate cost, and in some cases increase attack surface for no benefit.
 
@@ -533,15 +530,15 @@ As you track that metric, you realize that recovery has become very long, due to
 
 A ransomware threat group takes control of your cloud environment, steals your root account, and deletes databases. Unfortunately for them, they can't do anything to destroy the backups, and so you are back online rapidly after recovering the database in a clean environment.
 
-#### Infrastructure
+### Infrastructure
 
-By using microservices, access control to datastores can be made granular to every service.
+By using microservices, access control to datastore's can be made granular to every service.
 
 1. Use microservices in the environment that is the most managed you can technically use. Favor cloud functions over containers, containers over temporary VMs, and temporary VMs over long-lived server VMs.
 2. Leverage service mesh features of managed environments to enforce policy that protects data in transit, such as by enforcing mutual TLS authentication and encryption between all services and data stores.
 3. Instead of using traditional DLP tools to intercept data being exfiltrated, monitor cloud logs for exfiltration and use the service mesh to control egress to the Internet. By only allowing the data to be exfiltrated within the cloud environment, such activity will be much easier to detect.
 
-#### Temporary and Limited Access
+### Temporary and Limited Access
 
 Support staff often require read access to data, including customer data. 
 
