@@ -1,6 +1,6 @@
 {
   "name": "dsmm",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "C3WG",
   "packageManager": "yarn@3.2.1",
   "scripts": {
