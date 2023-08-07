@@ -434,6 +434,13 @@ In this case the firm must protect a wide range of datatypes in which many users
 - **Respond -** Level 2
 - **Recover and Improve -** Level 2
 
+### Scenario 3
+A leading global technology company has many products spanning hardware, software, and consulting services, catering to diverse industry sectors. The company recently discovered the benefits of the Data Security Management Model (DSMM) and performed a comprehensive evaluation of its portfolio. Unfortunately, the results were mixed, with various business units at different levels of maturity in terms of DSMM adoption, and many not where they should be. In response, the company created a program to rate its different areas based on their current DSMM status and where they wanted to be.
+
+Realizing that their resources were limited, the company decided to focus their DSMM journey on quantum computing, given its strategic importance. However, the recent Apex attack against a security vendor and the intelligence from their Information Sharing and Analysis Center (ISAC) concerning the threats to their cybersecurity product line made the company reassess its priorities.
+
+After attending the RSAC, the company understood that its cybersecurity software is a type of data and, therefore, performed a crash DSMM evaluation. The results were alarming, with the cybersecurity software rated at level 1 across the board. To address this, the company instituted a crash program to improve the detection capabilities of their cybersecurity software to level 3. They also initiated follow-up programs to evaluate the entire DSMM stack across their cybersecurity product line.
+
 ## Security Patterns
 
 The DSMM looks at data on its own, as an asset, instead of simply as data residing on infrastructure.
