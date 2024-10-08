@@ -34,8 +34,6 @@ Organizations are unique, and likewise their appropriate level of maturity will 
 
 Additionally, Objectives and Practices are quite often interrelated and, therefore, feed into one another. For example, **Identifying** sensitive data will play a key role in **Protecting** data. Likewise, better **Detect** capabilities will often support enhanced **Respond** efforts. The model also supports feedback from later Objectives and Practices to earlier ones. For example, lessons learned from an incident review or detection should likely be incorporated into the policies that are implemented in the **Protect** phase.
 
-As data security is in a phase of rapid evolution, we also encourage active collaboration on the DSMM. Suggestions for updates to the model or inclusion of specific controls or methods can be shared at: [suggestions@datasecurity.org](mailto:suggestions@datasecurity.org).
-
 ## Key Terms
 The nomenclature for the DSMM is similar to that found in other, mainstream security frameworks and standards, especially the NIST Cybersecurity Framework and Cybersecurity Capability Maturity Model (C2M2).
 
